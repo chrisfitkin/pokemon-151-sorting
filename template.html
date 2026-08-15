@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>151 Binder Index</title>
 <style>
 @font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:62% 125%;font-display:block;src:url(data:font/woff2;base64,/*__ARCHIVO__*/) format('woff2')}
@@ -37,9 +42,10 @@ body{
   -webkit-text-size-adjust:100%; -webkit-font-smoothing:antialiased;
 }
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 :focus-visible{outline:2px solid var(--red); outline-offset:2px; border-radius:3px}
 
-.app{display:flex; flex-direction:column; min-height:100dvh; max-width:540px; margin:0 auto}
+.app{display:flex; flex-direction:column; min-height:100vh; min-height:100dvh; max-width:540px; margin:0 auto}
 
 /* ---------- header ---------- */
 .bar{
@@ -83,7 +89,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hint b{color:var(--dim); font-weight:600}
 
 /* ---------- main ---------- */
-main{padding:16px 16px 20px; display:flex; flex-direction:column; gap:14px}
+main{flex:1; padding:16px 16px 20px; display:flex; flex-direction:column; gap:14px; align-content:start}
+main > *{flex:none}
 
 .panel{background:var(--panel); border:1px solid var(--line-soft); border-radius:14px; box-shadow:var(--shadow)}
 
@@ -240,6 +247,8 @@ main{padding:16px 16px 20px; display:flex; flex-direction:column; gap:14px}
 }
 </style>
 
+</head>
+<body>
 <div class="app">
   <header class="bar">
     <div class="crest">
@@ -521,3 +530,5 @@ q.placeholder = PLACEHOLDER.card;
 render();
 if (window.matchMedia("(hover: hover)").matches) q.focus();
 </script>
+</body>
+</html>
