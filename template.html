@@ -1,0 +1,523 @@
+<title>151 Binder Index</title>
+<style>
+@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:62% 125%;font-display:block;src:url(data:font/woff2;base64,/*__ARCHIVO__*/) format('woff2')}
+@font-face{font-family:'PlexMono';font-style:normal;font-weight:400;font-display:block;src:url(data:font/woff2;base64,/*__MONO4__*/) format('woff2')}
+@font-face{font-family:'PlexMono';font-style:normal;font-weight:600;font-display:block;src:url(data:font/woff2;base64,/*__MONO6__*/) format('woff2')}
+
+:root{
+  --bg:#E4E8EA; --panel:#FBFBFA; --sunk:#EEF1F2;
+  --ink:#12171A; --dim:#556168; --faint:#6E7A80; --line:#CCD4D8; --line-soft:#DDE3E6;
+  --red:#BE3325; --red-ink:#BE3325; --red-soft:#F5DED9;
+  --holo:#8A6317; --holo-ink:#7A5713; --holo-soft:#F2E6CB;
+  --shadow:0 1px 0 rgba(18,23,26,.04), 0 6px 22px -14px rgba(18,23,26,.45);
+  --disp:'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --mono:'PlexMono', ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1113; --panel:#171D20; --sunk:#12181A;
+    --ink:#E8EEF0; --dim:#9AA7AD; --faint:#7E8A90; --line:#273136; --line-soft:#1E272B;
+    --red:#F2604F; --red-ink:#F2604F; --red-soft:#381914;
+    --holo:#E5B662; --holo-ink:#E5B662; --holo-soft:#2C2313;
+    --shadow:0 1px 0 rgba(0,0,0,.3), 0 8px 24px -16px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1113; --panel:#171D20; --sunk:#12181A;
+  --ink:#E8EEF0; --dim:#9AA7AD; --faint:#7E8A90; --line:#273136; --line-soft:#1E272B;
+  --red:#F2604F; --red-ink:#F2604F; --red-soft:#381914;
+  --holo:#E5B662; --holo-ink:#E5B662; --holo-soft:#2C2313;
+  --shadow:0 1px 0 rgba(0,0,0,.3), 0 8px 24px -16px rgba(0,0,0,.9);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:var(--disp); font-stretch:100%;
+  -webkit-text-size-adjust:100%; -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--red); outline-offset:2px; border-radius:3px}
+
+.app{display:flex; flex-direction:column; min-height:100dvh; max-width:540px; margin:0 auto}
+
+/* ---------- header ---------- */
+.bar{
+  position:sticky; top:0; z-index:20; padding:14px 16px 12px;
+  background:var(--bg); border-bottom:1px solid var(--line-soft);
+}
+.crest{display:flex; align-items:baseline; gap:9px; margin-bottom:12px}
+.crest b{
+  font-family:var(--disp); font-stretch:62%; font-weight:700; font-size:30px;
+  line-height:.8; letter-spacing:.01em; color:var(--red-ink);
+}
+.crest span{
+  font-family:var(--mono); font-size:10px; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--faint); font-variant-numeric:tabular-nums;
+}
+.modes{display:flex; gap:2px; padding:2px; background:var(--sunk); border:1px solid var(--line-soft); border-radius:9px; margin-bottom:10px}
+.modes button{
+  flex:1; padding:8px 6px; border-radius:7px; font-family:var(--mono); font-size:11.5px;
+  letter-spacing:.05em; text-transform:uppercase; color:var(--dim);
+}
+.modes button[aria-selected="true"]{background:var(--panel); color:var(--ink); box-shadow:var(--shadow); font-weight:600}
+
+.field{position:relative; display:flex; align-items:center}
+.field input{
+  width:100%; padding:13px 42px 13px 14px; border-radius:11px;
+  border:1.5px solid var(--line); background:var(--panel); color:var(--ink);
+  font-family:var(--mono); font-size:17px; font-weight:600; letter-spacing:.02em;
+  font-variant-numeric:tabular-nums;
+}
+.field input::placeholder{color:var(--faint); font-weight:400; letter-spacing:0}
+.field input:focus{outline:none; border-color:var(--red); box-shadow:0 0 0 3px var(--red-soft)}
+.wipe{
+  position:absolute; right:6px; width:32px; height:32px; border-radius:50%;
+  display:grid; place-items:center; color:var(--faint); font-size:19px; line-height:1;
+}
+.wipe[hidden]{display:none}
+.hint{
+  margin:8px 2px 0; font-family:var(--mono); font-size:10.5px; letter-spacing:.03em;
+  color:var(--faint); min-height:14px;
+}
+.hint b{color:var(--dim); font-weight:600}
+
+/* ---------- main ---------- */
+main{padding:16px 16px 20px; display:flex; flex-direction:column; gap:14px}
+
+.panel{background:var(--panel); border:1px solid var(--line-soft); border-radius:14px; box-shadow:var(--shadow)}
+
+/* card head */
+.head{display:flex; gap:14px; align-items:flex-start; padding:16px 16px 14px; border-bottom:1px solid var(--line-soft)}
+.no{
+  font-family:var(--disp); font-stretch:62%; font-weight:700; font-size:52px; line-height:.82;
+  letter-spacing:.005em; font-variant-numeric:tabular-nums; flex:none; color:var(--ink);
+}
+.no i{font-family:var(--mono); font-style:normal; font-size:17px; font-weight:400; color:var(--faint); vertical-align:.34em; margin-right:1px}
+.who{min-width:0; padding-top:2px}
+.who h1{
+  margin:0; font-family:var(--disp); font-stretch:80%; font-weight:600; font-size:23px;
+  line-height:1.06; letter-spacing:-.005em; text-wrap:balance;
+}
+.tags{display:flex; flex-wrap:wrap; gap:5px; margin-top:7px}
+.tag{
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.07em; text-transform:uppercase;
+  padding:3px 6px; border-radius:5px; background:var(--sunk); color:var(--dim); border:1px solid var(--line-soft);
+}
+.tag.hot{background:var(--red-soft); color:var(--red-ink); border-color:transparent; font-weight:600}
+
+/* locations */
+.locs{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line-soft)}
+.loc{background:var(--panel); padding:14px 14px 15px; display:flex; flex-direction:column; gap:10px}
+.loc:first-child{border-bottom-left-radius:13px}
+.loc:last-child{border-bottom-right-radius:13px}
+.stripe{display:flex; align-items:center; gap:7px}
+.dot{width:7px; height:7px; border-radius:2px; flex:none; background:var(--red)}
+.loc.rh .dot{background:var(--holo)}
+.loc.off .dot{background:var(--faint)}
+.stripe p{
+  margin:0; font-family:var(--mono); font-size:10.5px; font-weight:600;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--red-ink);
+}
+.loc.rh .stripe p{color:var(--holo-ink)}
+.loc.off .stripe p{color:var(--faint)}
+
+.readout{display:flex; align-items:baseline; gap:8px}
+.readout .k{font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint)}
+.readout .v{
+  font-family:var(--disp); font-stretch:62%; font-weight:700; font-size:44px; line-height:.8;
+  font-variant-numeric:tabular-nums;
+}
+.spotline{margin:0; font-family:var(--disp); font-stretch:80%; font-weight:600; font-size:15px; line-height:1.2}
+.spotline em{font-style:normal; font-family:var(--mono); font-size:11px; font-weight:400; color:var(--dim); display:block; margin-top:3px; letter-spacing:.03em}
+.slotline{margin:0; font-family:var(--mono); font-size:10px; letter-spacing:.05em; color:var(--faint); font-variant-numeric:tabular-nums}
+.nope{margin:0; font-family:var(--disp); font-stretch:80%; font-size:14px; line-height:1.35; color:var(--dim); max-width:22ch}
+
+/* pocket grid glyph */
+.pkt{display:grid; grid-template-columns:repeat(3,1fr); gap:3px; width:54px}
+.pkt i{display:block; aspect-ratio:5/7; border-radius:2px; background:var(--sunk); border:1px solid var(--line-soft)}
+.pkt i.on{background:var(--red); border-color:var(--red); animation:pop .28s cubic-bezier(.2,1.3,.5,1)}
+.loc.rh .pkt i.on{background:var(--holo); border-color:var(--holo)}
+@keyframes pop{from{transform:scale(.55); opacity:.3} to{transform:scale(1); opacity:1}}
+
+/* also-printed strip */
+.also{padding:12px 14px 14px; border-top:1px solid var(--line-soft)}
+.also h2{margin:0 0 9px; font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); font-weight:400}
+.chips{display:flex; flex-wrap:wrap; gap:6px}
+.chip{
+  display:flex; align-items:center; gap:7px; padding:6px 10px 6px 8px; border-radius:8px;
+  background:var(--sunk); border:1px solid var(--line-soft);
+}
+.chip b{font-family:var(--mono); font-size:12px; font-weight:600; font-variant-numeric:tabular-nums}
+.chip span{font-family:var(--mono); font-size:9.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--dim)}
+.chip:hover{border-color:var(--red); color:var(--red-ink)}
+
+/* page view */
+.pghead{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:13px 14px; border-bottom:1px solid var(--line-soft)}
+.pghead h1{margin:0; font-family:var(--disp); font-stretch:62%; font-weight:700; font-size:30px; line-height:.85; font-variant-numeric:tabular-nums}
+.pghead h1 i{font-family:var(--mono); font-style:normal; font-size:11px; font-weight:400; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); display:block; margin-bottom:5px; font-stretch:100%}
+.step{display:flex; gap:6px}
+.step button{
+  width:38px; height:38px; border-radius:9px; border:1px solid var(--line);
+  background:var(--panel); display:grid; place-items:center; font-family:var(--mono); font-size:15px; color:var(--dim);
+}
+.step button:disabled{opacity:.32; cursor:default}
+.step button:not(:disabled):hover{border-color:var(--red); color:var(--red-ink)}
+
+.sheet{display:grid; grid-template-columns:repeat(3,1fr); gap:7px; padding:12px}
+.pocket{
+  aspect-ratio:5/7; border-radius:8px; border:1px solid var(--line-soft); background:var(--sunk);
+  padding:9px 7px 8px; display:flex; flex-direction:column; gap:3px; text-align:left; overflow:hidden;
+}
+.pocket:hover{border-color:var(--red)}
+.pocket .sp{font-family:var(--mono); font-size:8.5px; letter-spacing:.06em; color:var(--faint)}
+.pocket .cn{font-family:var(--mono); font-size:12.5px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1}
+.pocket .nm{
+  font-family:var(--disp); font-stretch:70%; font-weight:600; font-size:12.5px; line-height:1.12;
+  overflow:hidden; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; word-break:break-word;
+}
+.foot{
+  margin-top:auto; padding-top:6px; border-top:1px solid var(--line-soft);
+  display:flex; align-items:baseline; justify-content:space-between; gap:4px;
+  font-family:var(--mono); font-size:8.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--faint);
+}
+.foot b{font-weight:400; font-variant-numeric:tabular-nums; letter-spacing:.02em}
+/* reverse holos wear a brass foil edge rather than a filled tint */
+.pocket.rh{box-shadow:inset 0 3px 0 var(--holo)}
+.pocket.rh .foot{color:var(--holo-ink); font-weight:600}
+.pocket.hi{border-color:var(--red); box-shadow:0 0 0 2px var(--red-soft)}
+.pocket.rh.hi{box-shadow:inset 0 3px 0 var(--holo), 0 0 0 2px var(--red-soft)}
+
+/* results list */
+.list{display:flex; flex-direction:column}
+.row{
+  display:flex; align-items:center; gap:12px; padding:11px 14px; text-align:left;
+  border-bottom:1px solid var(--line-soft); width:100%;
+}
+.row:last-child{border-bottom:0}
+.row .cn{font-family:var(--mono); font-size:13px; font-weight:600; font-variant-numeric:tabular-nums; color:var(--dim); flex:none; width:38px}
+.row .nm{font-family:var(--disp); font-stretch:80%; font-weight:600; font-size:16px; min-width:0; flex:1; line-height:1.15}
+.row .rr{font-family:var(--mono); font-size:9.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--faint); flex:none}
+.row:hover{background:var(--sunk)}
+.row:hover .cn{color:var(--red-ink)}
+
+.note{padding:22px 16px; text-align:center}
+.note p{margin:0; font-family:var(--disp); font-stretch:80%; font-size:15px; color:var(--dim); line-height:1.45}
+.note p b{color:var(--ink); font-weight:600}
+
+/* legend / empty state */
+.legend{padding:15px 16px}
+.legend h2{margin:0 0 10px; font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); font-weight:400}
+.legend ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px}
+.legend li{display:flex; gap:10px; align-items:baseline; font-family:var(--disp); font-stretch:80%; font-size:14px; line-height:1.35; color:var(--dim)}
+.legend li b{font-family:var(--mono); font-size:11px; font-weight:600; color:var(--ink); flex:none; width:68px; letter-spacing:.02em; white-space:nowrap}
+.tally{display:flex; gap:0; border-top:1px solid var(--line-soft)}
+.tally div{flex:1; padding:12px 6px; text-align:center; border-right:1px solid var(--line-soft)}
+.tally div:last-child{border-right:0}
+.tally b{display:block; font-family:var(--disp); font-stretch:62%; font-weight:700; font-size:24px; line-height:1; font-variant-numeric:tabular-nums}
+.tally span{display:block; margin-top:5px; font-family:var(--mono); font-size:9px; letter-spacing:.06em; text-transform:uppercase; color:var(--faint)}
+
+/* ---------- keypad ---------- */
+.pad{position:sticky; bottom:0; z-index:15; padding:10px 16px calc(12px + env(safe-area-inset-bottom)); background:var(--bg); border-top:1px solid var(--line-soft)}
+.keys{display:grid; grid-template-columns:repeat(3,1fr); gap:7px}
+.keys button{
+  padding:13px 0; border-radius:10px; background:var(--panel); border:1px solid var(--line);
+  font-family:var(--mono); font-size:19px; font-weight:600; font-variant-numeric:tabular-nums;
+  box-shadow:var(--shadow); transition:transform .07s ease;
+}
+.keys button:active{transform:translateY(1px); background:var(--sunk)}
+.keys button.alt{font-size:15px; color:var(--dim); font-weight:400}
+.keys button.alt:hover{color:var(--red-ink); border-color:var(--red)}
+
+@media (min-width:520px){
+  .no{font-size:60px}
+  .who h1{font-size:26px}
+  .sheet{gap:9px; padding:14px}
+  .pocket .nm{font-size:13.5px}
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important; transition:none !important}
+}
+</style>
+
+<div class="app">
+  <header class="bar">
+    <div class="crest">
+      <b>151</b>
+      <span>Master set &middot; 360 pockets &middot; 40 pages</span>
+    </div>
+    <div class="modes" role="tablist" aria-label="Lookup mode">
+      <button role="tab" id="tab-card" aria-selected="true" data-mode="card">Find a card</button>
+      <button role="tab" id="tab-page" aria-selected="false" data-mode="page">Open a page</button>
+    </div>
+    <div class="field">
+      <input id="q" type="text" autocomplete="off" autocapitalize="off" autocorrect="off"
+             spellcheck="false" aria-label="Search" placeholder="Card number or name" />
+      <button class="wipe" id="wipe" hidden aria-label="Clear">&times;</button>
+    </div>
+    <p class="hint" id="hint"></p>
+  </header>
+
+  <main id="out" aria-live="polite"></main>
+
+  <footer class="pad">
+    <div class="keys" id="keys">
+      <button data-k="1">1</button><button data-k="2">2</button><button data-k="3">3</button>
+      <button data-k="4">4</button><button data-k="5">5</button><button data-k="6">6</button>
+      <button data-k="7">7</button><button data-k="8">8</button><button data-k="9">9</button>
+      <button data-k="back" class="alt" aria-label="Backspace">&#9003;</button>
+      <button data-k="0">0</button>
+      <button data-k="clear" class="alt" aria-label="Clear">clear</button>
+    </div>
+  </footer>
+</div>
+
+<script>
+/* ---------- data ---------- */
+const CARDS = /*__DATA__*/;
+const DR = new Set([3,6,9,24,38,40,65,76,115,124,145,151]);
+const SPOTS = ["Top Left","Top Middle","Top Right","Middle Left","Center","Middle Right","Bottom Left","Bottom Middle","Bottom Right"];
+const ALIAS = {29:"nidoran f female", 32:"nidoran m male"};
+
+/* ---------- slot map ---------- */
+const reg = {}, rh = {}, atSlot = [];
+(function(){
+  let s = 1;
+  const place = (n, isRh) => { atSlot[s] = {n, rh:isRh}; return s++; };
+  for (let n = 1; n <= 165; n++){
+    reg[n] = place(n, false);
+    if (!DR.has(n)) rh[n] = place(n, true);
+  }
+  for (let n = 166; n <= 207; n++) reg[n] = place(n, false);
+})();
+const TOTAL = 360, PAGES = 40;
+
+const page = s => Math.ceil(s / 9);
+const spot = s => ((s - 1) % 9) + 1;
+const card = n => CARDS[n - 1];
+const norm = t => t.toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
+
+/* ---------- state ---------- */
+const out = document.getElementById("out");
+const q = document.getElementById("q");
+const hint = document.getElementById("hint");
+const wipe = document.getElementById("wipe");
+let mode = "card";
+
+const PLACEHOLDER = {card:"Card number or name", page:"Page number, 1 to 40"};
+const HINTS = {
+  card:'Type <b>67</b> for a card, <b>p14</b> for a binder page, or a name like <b>machoke</b>.',
+  page:'Pages run <b>1</b> to <b>40</b>. Tap any pocket to open that card.'
+};
+
+function setMode(m){
+  mode = m;
+  document.getElementById("tab-card").setAttribute("aria-selected", String(m === "card"));
+  document.getElementById("tab-page").setAttribute("aria-selected", String(m === "page"));
+  q.placeholder = PLACEHOLDER[m];
+  hint.innerHTML = HINTS[m];
+  q.value = "";
+  render();
+}
+
+/* ---------- query parsing ---------- */
+function parse(raw){
+  const t = raw.trim();
+  if (!t) return {kind:"empty"};
+  let m = t.match(/^p(?:age|g)?[\s.:#-]*(\d{1,3})$/i);
+  if (m) return {kind:"page", n:+m[1]};
+  m = t.match(/^[#no.\s]*0*(\d{1,3})$/i);
+  if (m) return {kind: mode === "page" ? "page" : "card", n:+m[1]};
+  m = t.match(/^(?:slot|s)[\s.:#-]*(\d{1,3})$/i);
+  if (m) return {kind:"slot", n:+m[1]};
+  return {kind:"name", t:norm(t)};
+}
+
+function search(term){
+  const hits = [];
+  for (let n = 1; n <= 207; n++){
+    const hay = norm(card(n).name) + " " + (ALIAS[n] || "");
+    const i = hay.indexOf(term);
+    if (i === 0) hits.push({n, rank:0});
+    else if (i > 0) hits.push({n, rank:1});
+  }
+  hits.sort((a, b) => a.rank - b.rank || a.n - b.n);
+  return hits.map(h => h.n);
+}
+
+/* ---------- rendering ---------- */
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const pad3 = n => String(n).padStart(3, "0");
+
+function glyph(s){
+  let g = "";
+  for (let i = 1; i <= 9; i++) g += '<i class="' + (i === s ? "on" : "") + '"></i>';
+  return '<div class="pkt" aria-hidden="true">' + g + "</div>";
+}
+
+function locPanel(slot, kind){
+  const cls = kind === "rh" ? "loc rh" : "loc";
+  const label = kind === "rh" ? "Reverse Holo" : "Regular";
+  const p = page(slot), s = spot(slot);
+  return '<section class="' + cls + '">' +
+    '<div class="stripe"><span class="dot"></span><p>' + label + '</p></div>' +
+    '<div class="readout"><span class="k">Page</span><span class="v">' + p + '</span></div>' +
+    '<p class="spotline">' + SPOTS[s - 1] + '<em>Spot ' + s + ' of 9</em></p>' +
+    glyph(s) +
+    '<p class="slotline">Slot ' + slot + ' / 360</p>' +
+    '</section>';
+}
+
+function deadPanel(reason){
+  return '<section class="loc rh off">' +
+    '<div class="stripe"><span class="dot"></span><p>Reverse Holo</p></div>' +
+    '<p class="nope">' + reason + '</p>' +
+    glyph(0) +
+    '<p class="slotline">One pocket only</p>' +
+    '</section>';
+}
+
+function cardView(n){
+  const c = card(n);
+  const others = [];
+  for (let i = 1; i <= 207; i++) if (i !== n && card(i).name === c.name) others.push(i);
+
+  let html = '<article class="panel">' +
+    '<div class="head">' +
+      '<div class="no"><i>#</i>' + pad3(n) + '</div>' +
+      '<div class="who"><h1>' + esc(c.name) + '</h1><div class="tags">' +
+        '<span class="tag' + (c.r === "Double Rare" || n > 165 ? " hot" : "") + '">' + esc(c.r) + '</span>' +
+        '<span class="tag">' + esc(c.t) + '</span>' +
+      '</div></div>' +
+    '</div>' +
+    '<div class="locs">' + locPanel(reg[n], "reg");
+
+  if (rh[n]) html += locPanel(rh[n], "rh");
+  else if (DR.has(n)) html += deadPanel("Double Rare ex cards have no Reverse Holo printing.");
+  else html += deadPanel("Cards #166 to #207 are single prints with no Reverse Holo.");
+
+  html += "</div>";
+
+  if (others.length){
+    html += '<div class="also"><h2>Same card, other prints</h2><div class="chips">';
+    for (const o of others)
+      html += '<button class="chip" data-card="' + o + '"><b>#' + pad3(o) + '</b><span>' + esc(card(o).r) + '</span></button>';
+    html += "</div></div>";
+  }
+  return html + "</article>";
+}
+
+function pageView(p, hi){
+  const start = (p - 1) * 9 + 1;
+  let html = '<article class="panel">' +
+    '<div class="pghead">' +
+      '<h1><i>Binder page &middot; slots ' + start + "&ndash;" + (start + 8) + '</i>' + p + '</h1>' +
+      '<div class="step">' +
+        '<button data-page="' + (p - 1) + '"' + (p <= 1 ? " disabled" : "") + ' aria-label="Previous page">&#8592;</button>' +
+        '<button data-page="' + (p + 1) + '"' + (p >= PAGES ? " disabled" : "") + ' aria-label="Next page">&#8594;</button>' +
+      '</div>' +
+    '</div><div class="sheet">';
+
+  for (let i = 0; i < 9; i++){
+    const s = start + i, e = atSlot[s], c = card(e.n);
+    html += '<button class="pocket' + (e.rh ? " rh" : "") + (s === hi ? " hi" : "") + '" data-card="' + e.n + '">' +
+      '<span class="sp">' + (i + 1) + " &middot; " + SPOTS[i] + '</span>' +
+      '<span class="cn">#' + pad3(e.n) + '</span>' +
+      '<span class="nm">' + esc(c.name) + '</span>' +
+      '<span class="foot"><span>' + (e.rh ? "Rev holo" : (DR.has(e.n) ? "Double rare" : (e.n > 165 ? "Secret" : "Regular"))) + '</span>' +
+      '<b>' + s + '</b></span>' +
+      '</button>';
+  }
+  return html + "</div></article>";
+}
+
+function listView(ns, term){
+  if (!ns.length)
+    return '<div class="panel note"><p>Nothing matches <b>' + esc(term) + '</b>. Try a card number from <b>1</b> to <b>207</b>.</p></div>';
+  if (ns.length === 1) return cardView(ns[0]);
+  let html = '<div class="panel list">';
+  for (const n of ns.slice(0, 40))
+    html += '<button class="row" data-card="' + n + '"><span class="cn">#' + pad3(n) + '</span>' +
+      '<span class="nm">' + esc(card(n).name) + '</span><span class="rr">' + esc(card(n).r) + '</span></button>';
+  html += "</div>";
+  if (ns.length > 40) html += '<div class="panel note"><p>Showing 40 of ' + ns.length + ' matches. Keep typing to narrow it down.</p></div>';
+  return html;
+}
+
+function home(){
+  return '<div class="panel legend">' +
+      '<h2>How this binder is ordered</h2><ul>' +
+      '<li><b>#001&ndash;165</b><span>Collector order. Each card is followed immediately by its Reverse Holo.</span></li>' +
+      '<li><b>12 ex</b><span>The Double Rare ex cards have no Reverse Holo, so they take one pocket.</span></li>' +
+      '<li><b>#166&ndash;207</b><span>Illustration, ultra, and hyper rares. One pocket each, in number order.</span></li>' +
+      '</ul></div>' +
+    '<div class="panel"><div class="tally">' +
+      '<div><b>165</b><span>Base</span></div>' +
+      '<div><b>153</b><span>Rev holo</span></div>' +
+      '<div><b>42</b><span>Secret</span></div>' +
+      '<div><b>360</b><span>Pockets</span></div>' +
+    '</div></div>';
+}
+
+function render(){
+  const r = parse(q.value);
+  wipe.hidden = !q.value;
+
+  if (r.kind === "empty"){ out.innerHTML = mode === "page" ? pageView(1) : home(); return; }
+
+  if (r.kind === "card"){
+    out.innerHTML = (r.n >= 1 && r.n <= 207)
+      ? cardView(r.n)
+      : '<div class="panel note"><p>There is no card <b>#' + r.n + '</b>. This set runs <b>#001</b> to <b>#207</b>.</p></div>';
+    return;
+  }
+  if (r.kind === "page"){
+    out.innerHTML = (r.n >= 1 && r.n <= PAGES)
+      ? pageView(r.n)
+      : '<div class="panel note"><p>Page <b>' + r.n + '</b> is past the end. The binder has <b>40</b> pages.</p></div>';
+    return;
+  }
+  if (r.kind === "slot"){
+    if (r.n >= 1 && r.n <= TOTAL) out.innerHTML = pageView(page(r.n), r.n);
+    else out.innerHTML = '<div class="panel note"><p>Slot <b>' + r.n + '</b> is out of range. The binder holds <b>360</b> cards.</p></div>';
+    return;
+  }
+  out.innerHTML = listView(search(r.t), q.value.trim());
+}
+
+/* ---------- events ---------- */
+q.addEventListener("input", render);
+
+document.querySelectorAll(".modes button").forEach(b =>
+  b.addEventListener("click", () => setMode(b.dataset.mode)));
+
+wipe.addEventListener("click", () => { q.value = ""; render(); q.focus(); });
+
+document.getElementById("keys").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  const k = b.dataset.k;
+  if (k === "back") q.value = q.value.slice(0, -1);
+  else if (k === "clear") q.value = "";
+  else q.value += k;
+  render();
+});
+
+out.addEventListener("click", e => {
+  const t = e.target.closest("[data-card],[data-page]");
+  if (!t) return;
+  if (t.dataset.card){
+    setMode("card");
+    q.value = t.dataset.card;
+  } else {
+    setMode("page");
+    q.value = t.dataset.page;
+  }
+  render();
+  window.scrollTo({top:0, behavior:"smooth"});
+});
+
+hint.innerHTML = HINTS.card;
+q.placeholder = PLACEHOLDER.card;
+render();
+if (window.matchMedia("(hover: hover)").matches) q.focus();
+</script>
