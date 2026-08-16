@@ -130,8 +130,10 @@ main{padding:12px 14px 0; display:flex; flex-direction:column; gap:11px}
 .slotline{margin:0; font-family:var(--mono); font-size:10px; letter-spacing:.05em; color:var(--faint); font-variant-numeric:tabular-nums}
 .nope{margin:0; font-family:var(--disp); font-stretch:80%; font-size:14px; line-height:1.35; color:var(--dim); max-width:22ch}
 
-/* pocket grid glyph */
-.pkt{display:grid; grid-template-columns:repeat(3,1fr); gap:3px; width:48px}
+/* pocket grid glyph — a button in card view, where it opens that binder page */
+.pkt{display:grid; grid-template-columns:repeat(3,1fr); gap:3px; width:48px; padding:0}
+button.pkt:hover i:not(.on){border-color:var(--red)}
+button.pkt:active{transform:scale(.94)}
 .pkt i{display:block; aspect-ratio:5/7; border-radius:2px; background:var(--pocket); border:1px solid var(--pocket-line)}
 .pkt i.on{background:var(--red); border-color:var(--red); animation:pop .28s cubic-bezier(.2,1.3,.5,1)}
 .loc.rh .pkt i.on{background:var(--holo); border-color:var(--holo)}
@@ -225,6 +227,19 @@ body.nokeys .pad{transform:translateY(105%); pointer-events:none}
 .keys button.alt{font-size:13px; color:var(--dim); font-weight:400}
 .keys button.alt:hover{color:var(--red-ink); border-color:var(--red)}
 
+/* ---------- floating keypad button ---------- */
+/* shows only while the pad is retracted, so the bottom edge is never dead */
+.fab{
+  position:fixed; right:14px; bottom:calc(14px + env(safe-area-inset-bottom)); z-index:26;
+  width:56px; height:56px; border-radius:50%; border:1.5px solid var(--red);
+  background:var(--panel); color:var(--red-ink); box-shadow:var(--shadow);
+  display:none; place-items:center;
+}
+body.nokeys .fab{display:grid}
+.fab:active{transform:scale(.94)}
+.fabdots{display:grid; grid-template-columns:repeat(3,1fr); gap:3px; place-items:center}
+.fabdots i{display:block; width:4px; height:4px; border-radius:1px; background:currentColor}
+
 @media (min-width:520px){
   .no{font-size:46px}
   .sheet{gap:9px; padding:14px}
@@ -268,6 +283,10 @@ body.nokeys .pad{transform:translateY(105%); pointer-events:none}
     <button data-k="clear" class="alt" aria-label="Clear">clear</button>
   </div>
 </footer>
+
+<button class="fab" id="fab" aria-label="Show keypad" aria-controls="pad">
+  <span class="fabdots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+</button>
 
 <script>
 /* ---------- data ---------- */
@@ -350,10 +369,13 @@ function search(term){
 const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 const pad3 = n => String(n).padStart(3, "0");
 
-function glyph(s){
+// with a slot the glyph is tappable and opens that binder page with the pocket lit;
+// the dead panel has no page to open, so it stays decorative
+function glyph(s, slot){
   let g = "";
   for (let i = 1; i <= 9; i++) g += '<i class="' + (i === s ? "on" : "") + '"></i>';
-  return '<div class="pkt" aria-hidden="true">' + g + "</div>";
+  if (!slot) return '<div class="pkt" aria-hidden="true">' + g + "</div>";
+  return '<button class="pkt" data-slot="' + slot + '" aria-label="Open binder page ' + page(slot) + '">' + g + "</button>";
 }
 
 function locPanel(slot, kind, n){
@@ -364,7 +386,7 @@ function locPanel(slot, kind, n){
     '<div class="stripe"><span class="dot"></span><p>' + label + '</p><s>' + slot + '</s></div>' +
     '<div class="readout"><span class="k">Page</span><span class="v">' + p + '</span></div>' +
     '<p class="spotline">' + SPOTS[s - 1] + '<em>Spot ' + s + ' of 9</em></p>' +
-    glyph(s) +
+    glyph(s, slot) +
     '</section>';
 }
 
@@ -504,7 +526,9 @@ const padEl = document.getElementById("pad");
 const keytog = document.getElementById("keytog");
 
 function syncPad(){
-  const h = document.body.classList.contains("nokeys") ? 14 : padEl.offsetHeight + 14;
+  // when the pad is retracted the fab takes its place, so keep clearance for it
+  const hidden = document.body.classList.contains("nokeys");
+  const h = hidden ? 14 + 62 : padEl.offsetHeight + 14;
   out.style.paddingBottom = h + "px";
 }
 // only a deliberate press of the toggle is a saved preference; an auto-hide is transient
@@ -522,9 +546,55 @@ keytog.addEventListener("click", () => setKeys(document.body.classList.contains(
 function autoHide(){
   if (!document.body.classList.contains("nokeys")) setKeys(false, false);
 }
-out.addEventListener("touchmove", autoHide, {passive:true});
 out.addEventListener("wheel", autoHide, {passive:true});
 out.addEventListener("pointerdown", e => { if (!e.target.closest("button")) autoHide(); });
+
+const fab = document.getElementById("fab");
+fab.addEventListener("click", () => setKeys(true, true));
+
+/* ---------- swipe between binder pages ---------- */
+// which page the results area is showing right now, or 0 if it is not a page view
+function shownPage(){
+  const r = parse(q.value);
+  if (r.kind === "page" && r.n >= 1 && r.n <= PAGES) return r.n;
+  if (r.kind === "slot" && r.n >= 1 && r.n <= TOTAL) return page(r.n);
+  if (r.kind === "empty" && mode === "page") return 1;
+  return 0;
+}
+function goPage(p){
+  if (p < 1 || p > PAGES) return;
+  setMode("page");
+  q.value = String(p);
+  render();
+}
+
+const SWIPE_MIN = 45, SWIPE_MS = 700;
+let tStart = null, lastSwipe = 0;
+
+out.addEventListener("touchstart", e => {
+  const t = e.changedTouches[0];
+  tStart = {x:t.clientX, y:t.clientY, at:Date.now()};
+}, {passive:true});
+
+// a sideways drag is navigation, not reading, so it must not retract the keypad
+out.addEventListener("touchmove", e => {
+  if (!tStart) { autoHide(); return; }
+  const t = e.changedTouches[0];
+  if (Math.abs(t.clientY - tStart.y) > Math.abs(t.clientX - tStart.x)) autoHide();
+}, {passive:true});
+
+out.addEventListener("touchend", e => {
+  const s = tStart; tStart = null;
+  if (!s) return;
+  const t = e.changedTouches[0];
+  const dx = t.clientX - s.x, dy = t.clientY - s.y;
+  if (Date.now() - s.at > SWIPE_MS) return;
+  if (Math.abs(dx) < SWIPE_MIN || Math.abs(dx) < Math.abs(dy) * 2) return;
+  const cur = shownPage();
+  if (!cur) return;
+  lastSwipe = Date.now();
+  goPage(cur + (dx < 0 ? 1 : -1));
+}, {passive:true});
 
 // a pause means you have moved on to the next card
 const IDLE = 2500;
@@ -553,11 +623,16 @@ document.getElementById("keys").addEventListener("click", e => {
 });
 
 out.addEventListener("click", e => {
-  const t = e.target.closest("[data-card],[data-page]");
+  // a swipe that ends on a pocket still fires a click; that is navigation already done
+  if (Date.now() - lastSwipe < 400) return;
+  const t = e.target.closest("[data-card],[data-page],[data-slot]");
   if (!t) return;
   if (t.dataset.card){
     setMode("card");
     q.value = t.dataset.card;
+  } else if (t.dataset.slot){
+    setMode("page");
+    q.value = "s" + t.dataset.slot;   // opens the page with that pocket lit
   } else {
     setMode("page");
     q.value = t.dataset.page;
