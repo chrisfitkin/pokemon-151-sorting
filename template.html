@@ -151,6 +151,20 @@ button.pkt:active{transform:scale(.94)}
 .chip span{font-family:var(--mono); font-size:9.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--dim)}
 .chip:hover{border-color:var(--red); color:var(--red-ink)}
 
+/* ---------- binder spread ---------- */
+/* the facing leaf, rendered at true scale inside a 15% window and clipped to
+   its inner edge, so the page visibly sits left or right of the spine */
+.spread{display:flex; align-items:stretch; gap:5px}
+.spread > .panel{flex:1 1 auto; min-width:0}
+.ghost{
+  position:relative; flex:0 0 15%; overflow:hidden; pointer-events:none;
+  opacity:.26; filter:saturate(.45); border-radius:14px;
+}
+.ghost.bare{opacity:1; filter:none}          /* outer edge of the binder: nothing faces it */
+.ghost .mini{position:absolute; top:0; width:566.667%}
+.spread.right .ghost .mini{right:0}          /* page is on the right, so we see the facing page's right edge */
+.spread.left  .ghost .mini{left:0}           /* page is on the left, so we see the facing page's left edge */
+
 /* page view */
 .pghead{display:flex; align-items:center; justify-content:space-between; gap:9px; padding:7px 11px; border-bottom:1px solid var(--line-soft)}
 .pghead h1{margin:0; font-family:var(--disp); font-stretch:62%; font-weight:700; font-size:22px; line-height:.85; font-variant-numeric:tabular-nums}
@@ -168,13 +182,16 @@ button.pkt:active{transform:scale(.94)}
   padding:6px 6px 5px; display:flex; flex-direction:column; gap:1px; text-align:left; overflow:hidden;
 }
 .pocket:hover{border-color:var(--red)}
-.pocket .sp{font-family:var(--mono); font-size:8.5px; letter-spacing:.06em; color:var(--faint)}
+/* must stay one line: a wrapped "6 · Middle Right" adds a row's worth of height
+   to every pocket and pushes the bottom row behind the keypad */
+.pocket .sp{font-family:var(--mono); font-size:7.5px; letter-spacing:.01em; color:var(--faint); white-space:nowrap; overflow:hidden}
 .pocket .cn{font-family:var(--mono); font-size:12.5px; font-weight:600; font-variant-numeric:tabular-nums; line-height:1}
 .pocket .nm{font-family:var(--disp); font-stretch:70%; font-weight:600; font-size:12px; line-height:1.1; min-height:2.2em; overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; word-break:break-word}
 .foot{
   margin-top:auto; padding-top:6px; border-top:1px solid var(--pocket-line);
   display:flex; align-items:baseline; justify-content:space-between; gap:4px;
-  font-family:var(--mono); font-size:8.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--faint);
+  font-family:var(--mono); font-size:8px; letter-spacing:.04em; text-transform:uppercase; color:var(--faint);
+  white-space:nowrap; overflow:hidden;   /* "Double rare" + slot must not wrap onto a second line */
 }
 .foot b{font-weight:400; font-variant-numeric:tabular-nums; letter-spacing:.02em}
 /* reverse holos wear a brass foil edge rather than a filled tint */
@@ -453,6 +470,21 @@ function pageView(p, hi){
   return html + "</div></article>";
 }
 
+// In a real binder page 1 sits alone on the right, then 2|3, 4|5 ... pair up as
+// spreads. Odd pages are right-hand leaves, even pages left-hand ones, so the
+// facing leaf is p-1 for odd and p+1 for even. It is drawn at true scale and
+// clipped to a sliver, purely as a cue to where you are in the binder.
+function spreadView(p, hi){
+  const odd = p % 2 === 1;
+  const facing = odd ? p - 1 : p + 1;
+  const ghost = (facing >= 1 && facing <= PAGES)
+    ? '<div class="ghost" aria-hidden="true"><div class="mini">' + pageView(facing) + "</div></div>"
+    : '<div class="ghost bare" aria-hidden="true"></div>';   // outer edge of the binder
+  const main = pageView(p, hi);
+  return '<div class="spread ' + (odd ? "right" : "left") + '">' +
+    (odd ? ghost + main : main + ghost) + "</div>";
+}
+
 function listView(ns, term){
   if (!ns.length)
     return '<div class="panel note"><p>Nothing matches <b>' + esc(term) + '</b>. Try a card number from <b>1</b> to <b>207</b>.</p></div>';
@@ -492,7 +524,7 @@ function draw(){
   hint.hidden = !!q.value.trim();
   hint.innerHTML = HINTS[mode];
 
-  if (r.kind === "empty"){ out.innerHTML = mode === "page" ? pageView(1) : home(); return; }
+  if (r.kind === "empty"){ out.innerHTML = mode === "page" ? spreadView(1) : home(); return; }
 
   if (r.kind === "card"){
     out.innerHTML = (r.n >= 1 && r.n <= 207)
@@ -502,12 +534,12 @@ function draw(){
   }
   if (r.kind === "page"){
     out.innerHTML = (r.n >= 1 && r.n <= PAGES)
-      ? pageView(r.n)
+      ? spreadView(r.n)
       : '<div class="panel note"><p>Page <b>' + r.n + '</b> is past the end. The binder has <b>40</b> pages.</p></div>';
     return;
   }
   if (r.kind === "slot"){
-    if (r.n >= 1 && r.n <= TOTAL) out.innerHTML = pageView(page(r.n), r.n);
+    if (r.n >= 1 && r.n <= TOTAL) out.innerHTML = spreadView(page(r.n), r.n);
     else out.innerHTML = '<div class="panel note"><p>Slot <b>' + r.n + '</b> is out of range. The binder holds <b>360</b> cards.</p></div>';
     return;
   }
