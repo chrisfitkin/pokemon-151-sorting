@@ -130,7 +130,16 @@ main{padding:12px 14px 0; display:flex; flex-direction:column; gap:11px}
 .slotline{margin:0; font-family:var(--mono); font-size:10px; letter-spacing:.05em; color:var(--faint); font-variant-numeric:tabular-nums}
 .nope{margin:0; font-family:var(--disp); font-stretch:80%; font-size:14px; line-height:1.35; color:var(--dim); max-width:22ch}
 
-/* pocket grid glyph — a button in card view, where it opens that binder page */
+/* pocket grid glyph — a button in card view, where it opens that binder page.
+   Same spread cue as the page view, at glyph scale: the leaf sits on its real
+   side and the facing leaf is a clipped 15% sliver. */
+.pktwrap{display:flex; align-items:stretch; gap:2px; width:59px}
+.pktwrap > .pkt{flex:1 1 auto; width:auto}
+.pktghost{position:relative; flex:0 0 15%; overflow:hidden; pointer-events:none; opacity:.26; filter:saturate(.45)}
+.pktghost.bare{opacity:1; filter:none}
+.pktghost .pkt{position:absolute; top:0; width:48px}
+.pktwrap.right .pktghost .pkt{right:0}
+.pktwrap.left  .pktghost .pkt{left:0}
 .pkt{display:grid; grid-template-columns:repeat(3,1fr); gap:3px; width:48px; padding:0}
 button.pkt:hover i:not(.on){border-color:var(--red)}
 button.pkt:active{transform:scale(.94)}
@@ -387,12 +396,22 @@ const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;
 const pad3 = n => String(n).padStart(3, "0");
 
 // with a slot the glyph is tappable and opens that binder page with the pocket lit;
-// the dead panel has no page to open, so it stays decorative
+// the dead panel has no page to open, so it stays decorative. Either way it sits
+// on the leaf's real side of the spine, with the facing leaf ghosted beside it.
 function glyph(s, slot){
   let g = "";
   for (let i = 1; i <= 9; i++) g += '<i class="' + (i === s ? "on" : "") + '"></i>';
-  if (!slot) return '<div class="pkt" aria-hidden="true">' + g + "</div>";
-  return '<button class="pkt" data-slot="' + slot + '" aria-label="Open binder page ' + page(slot) + '">' + g + "</button>";
+  if (!slot)
+    return '<div class="pktwrap" aria-hidden="true"><div class="pkt">' + g +
+      '</div><span class="pktghost bare"></span></div>';
+
+  const p = page(slot), odd = p % 2 === 1;
+  const facing = odd ? p - 1 : p + 1;
+  const ghost = (facing >= 1 && facing <= PAGES)
+    ? '<span class="pktghost" aria-hidden="true"><span class="pkt">' + "<i></i>".repeat(9) + "</span></span>"
+    : '<span class="pktghost bare" aria-hidden="true"></span>';
+  const pkt = '<button class="pkt" data-slot="' + slot + '" aria-label="Open binder page ' + p + '">' + g + "</button>";
+  return '<div class="pktwrap ' + (odd ? "right" : "left") + '">' + (odd ? ghost + pkt : pkt + ghost) + "</div>";
 }
 
 function locPanel(slot, kind, n){
