@@ -139,7 +139,12 @@ main{padding:12px 14px 0; display:flex; flex-direction:column; gap:11px}
 .pktwrap{display:flex; align-items:stretch; gap:3px; width:59px}
 .pktwrap > .pkt{flex:1 1 auto; width:auto}
 .pktspine{flex:0 0 15%; position:relative; pointer-events:none}
-.pktspine::before{content:""; position:absolute; top:-2px; bottom:-2px; width:1px; background:var(--pocket-line)}
+/* a recessed crease, not a drawn line: a hairline lighter than the panel vanished
+   in dark mode, and a shadow reads as a gutter in both themes */
+.pktspine::before{
+  content:""; position:absolute; top:-2px; bottom:-2px; width:4px; border-radius:2px;
+  background:linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.8) 45%, rgba(0,0,0,.8) 55%, rgba(0,0,0,0));
+}
 .pktwrap.left  .pktspine::before{left:2px}
 .pktwrap.right .pktspine::before{right:2px}
 .pktspine.blank::before{display:none}
