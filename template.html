@@ -14,7 +14,7 @@
   --ink:#12171A; --dim:#556168; --faint:#6E7A80; --line:#CCD4D8; --line-soft:#DDE3E6;
   --red:#BE3325; --red-ink:#BE3325; --red-soft:#F5DED9;
   --holo:#8A6317; --holo-ink:#7A5713; --holo-soft:#F2E6CB;
-  --pocket:#DDE4E7; --pocket-line:#BAC5CB;
+  --pocket:#DDE4E7; --pocket-line:#BAC5CB; --crease:rgba(0,0,0,.5);
   --shadow:0 1px 0 rgba(18,23,26,.04), 0 6px 22px -14px rgba(18,23,26,.45);
   --disp:'Archivo', 'Helvetica Neue', Arial, sans-serif;
   --mono:'PlexMono', ui-monospace, Menlo, Consolas, monospace;
@@ -25,6 +25,7 @@
     --ink:#E8EEF0; --dim:#A2AFB5; --faint:#859399; --line:#273136; --line-soft:#1E272B;
     --red:#F2604F; --red-ink:#F2604F; --red-soft:#381914;
     --holo:#EFC069; --holo-ink:#E5B662; --holo-soft:#2C2313; --pocket:#2B353B; --pocket-line:#3E4A52;
+    --crease:rgba(0,0,0,.92);
     --shadow:0 1px 0 rgba(0,0,0,.3), 0 8px 24px -16px rgba(0,0,0,.9);
   }
 }
@@ -33,6 +34,7 @@
   --ink:#E8EEF0; --dim:#A2AFB5; --faint:#859399; --line:#273136; --line-soft:#1E272B;
   --red:#F2604F; --red-ink:#F2604F; --red-soft:#381914;
   --holo:#EFC069; --holo-ink:#E5B662; --holo-soft:#2C2313; --pocket:#2B353B; --pocket-line:#3E4A52;
+  --crease:rgba(0,0,0,.92);
   --shadow:0 1px 0 rgba(0,0,0,.3), 0 8px 24px -16px rgba(0,0,0,.9);
 }
 
@@ -136,18 +138,28 @@ main{padding:12px 14px 0; display:flex; flex-direction:column; gap:11px}
 /* at this scale a clipped preview of the facing leaf just reads as a broken 4th
    column, so the spine itself is drawn instead: the glyph sits on its real side
    of that line, which is the whole point of the cue */
-.pktwrap{display:flex; align-items:stretch; gap:3px; width:59px}
+.pktwrap{display:flex; align-items:stretch; gap:3px; width:66px}
 .pktwrap > .pkt{flex:1 1 auto; width:auto}
-.pktspine{flex:0 0 15%; position:relative; pointer-events:none}
+.pktspine{flex:0 0 15px; position:relative; pointer-events:none}
 /* a recessed crease, not a drawn line: a hairline lighter than the panel vanished
-   in dark mode, and a shadow reads as a gutter in both themes */
+   in dark mode, and a shadow reads as a gutter in both themes. ::before is the
+   crease against the leaf, ::after the facing leaf ghosted beyond it — on a dark
+   panel that pale edge is what gives the near-black crease something to read
+   against, since black on black can only go so far. */
 .pktspine::before{
-  content:""; position:absolute; top:-2px; bottom:-2px; width:4px; border-radius:2px;
-  background:linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,.8) 45%, rgba(0,0,0,.8) 55%, rgba(0,0,0,0));
+  content:""; position:absolute; top:-2px; bottom:-2px; width:4px; border-radius:2px; z-index:1;
+  background:linear-gradient(90deg, rgba(0,0,0,0), var(--crease) 45%, var(--crease) 55%, rgba(0,0,0,0));
 }
-.pktwrap.left  .pktspine::before{left:2px}
-.pktwrap.right .pktspine::before{right:2px}
-.pktspine.blank::before{display:none}
+.pktspine::after{
+  content:""; position:absolute; top:2px; bottom:2px; width:8px;
+  background:var(--pocket); border:1px solid var(--pocket-line); opacity:.6;
+}
+.pktwrap.left  .pktspine::before{left:1px}
+.pktwrap.left  .pktspine::after{right:0; border-left:0;  border-radius:0 4px 4px 0}
+.pktwrap.right .pktspine::before{right:1px}
+.pktwrap.right .pktspine::after{left:0;  border-right:0; border-radius:4px 0 0 4px}
+.pktspine.blank::before,
+.pktspine.blank::after{display:none}
 .pkt{display:grid; grid-template-columns:repeat(3,1fr); gap:3px; width:48px; padding:0}
 button.pkt:hover i:not(.on){border-color:var(--red)}
 button.pkt:active{transform:scale(.94)}
