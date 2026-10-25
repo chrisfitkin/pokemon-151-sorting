@@ -1,0 +1,443 @@
+POKEMON SV 151 MASTER SET - BINDER ORDER
+360 pockets = 165 base + 153 reverse holos + 42 secrets, 9 per page over 40 pages.
+Odd pages are right-hand leaves, even pages left-hand. Page 1 sits alone; 2|3, 4|5 ... pair up.
+
+PAGE 1  (slots 1-9)  right-hand
+  1  #001  Regular     Bulbasaur              slot   1  Top Left
+  2  #001  Rev holo    Bulbasaur              slot   2  Top Middle
+  3  #002  Regular     Ivysaur                slot   3  Top Right
+  4  #002  Rev holo    Ivysaur                slot   4  Middle Left
+  5  #003  Double rare Venusaur ex            slot   5  Center
+  6  #004  Regular     Charmander             slot   6  Middle Right
+  7  #004  Rev holo    Charmander             slot   7  Bottom Left
+  8  #005  Regular     Charmeleon             slot   8  Bottom Middle
+  9  #005  Rev holo    Charmeleon             slot   9  Bottom Right
+
+PAGE 2  (slots 10-18)  left-hand
+  1  #006  Double rare Charizard ex           slot  10  Top Left
+  2  #007  Regular     Squirtle               slot  11  Top Middle
+  3  #007  Rev holo    Squirtle               slot  12  Top Right
+  4  #008  Regular     Wartortle              slot  13  Middle Left
+  5  #008  Rev holo    Wartortle              slot  14  Center
+  6  #009  Double rare Blastoise ex           slot  15  Middle Right
+  7  #010  Regular     Caterpie               slot  16  Bottom Left
+  8  #010  Rev holo    Caterpie               slot  17  Bottom Middle
+  9  #011  Regular     Metapod                slot  18  Bottom Right
+
+PAGE 3  (slots 19-27)  right-hand
+  1  #011  Rev holo    Metapod                slot  19  Top Left
+  2  #012  Regular     Butterfree             slot  20  Top Middle
+  3  #012  Rev holo    Butterfree             slot  21  Top Right
+  4  #013  Regular     Weedle                 slot  22  Middle Left
+  5  #013  Rev holo    Weedle                 slot  23  Center
+  6  #014  Regular     Kakuna                 slot  24  Middle Right
+  7  #014  Rev holo    Kakuna                 slot  25  Bottom Left
+  8  #015  Holo        Beedrill               slot  26  Bottom Middle
+  9  #015  Rev holo    Beedrill               slot  27  Bottom Right
+
+PAGE 4  (slots 28-36)  left-hand
+  1  #016  Regular     Pidgey                 slot  28  Top Left
+  2  #016  Rev holo    Pidgey                 slot  29  Top Middle
+  3  #017  Regular     Pidgeotto              slot  30  Top Right
+  4  #017  Rev holo    Pidgeotto              slot  31  Middle Left
+  5  #018  Regular     Pidgeot                slot  32  Center
+  6  #018  Rev holo    Pidgeot                slot  33  Middle Right
+  7  #019  Regular     Rattata                slot  34  Bottom Left
+  8  #019  Rev holo    Rattata                slot  35  Bottom Middle
+  9  #020  Regular     Raticate               slot  36  Bottom Right
+
+PAGE 5  (slots 37-45)  right-hand
+  1  #020  Rev holo    Raticate               slot  37  Top Left
+  2  #021  Regular     Spearow                slot  38  Top Middle
+  3  #021  Rev holo    Spearow                slot  39  Top Right
+  4  #022  Regular     Fearow                 slot  40  Middle Left
+  5  #022  Rev holo    Fearow                 slot  41  Center
+  6  #023  Regular     Ekans                  slot  42  Middle Right
+  7  #023  Rev holo    Ekans                  slot  43  Bottom Left
+  8  #024  Double rare Arbok ex               slot  44  Bottom Middle
+  9  #025  Regular     Pikachu                slot  45  Bottom Right
+
+PAGE 6  (slots 46-54)  left-hand
+  1  #025  Rev holo    Pikachu                slot  46  Top Left
+  2  #026  Holo        Raichu                 slot  47  Top Middle
+  3  #026  Rev holo    Raichu                 slot  48  Top Right
+  4  #027  Regular     Sandshrew              slot  49  Middle Left
+  5  #027  Rev holo    Sandshrew              slot  50  Center
+  6  #028  Regular     Sandslash              slot  51  Middle Right
+  7  #028  Rev holo    Sandslash              slot  52  Bottom Left
+  8  #029  Regular     Nidoran ♀              slot  53  Bottom Middle
+  9  #029  Rev holo    Nidoran ♀              slot  54  Bottom Right
+
+PAGE 7  (slots 55-63)  right-hand
+  1  #030  Regular     Nidorina               slot  55  Top Left
+  2  #030  Rev holo    Nidorina               slot  56  Top Middle
+  3  #031  Regular     Nidoqueen              slot  57  Top Right
+  4  #031  Rev holo    Nidoqueen              slot  58  Middle Left
+  5  #032  Regular     Nidoran ♂              slot  59  Center
+  6  #032  Rev holo    Nidoran ♂              slot  60  Middle Right
+  7  #033  Regular     Nidorino               slot  61  Bottom Left
+  8  #033  Rev holo    Nidorino               slot  62  Bottom Middle
+  9  #034  Holo        Nidoking               slot  63  Bottom Right
+
+PAGE 8  (slots 64-72)  left-hand
+  1  #034  Rev holo    Nidoking               slot  64  Top Left
+  2  #035  Regular     Clefairy               slot  65  Top Middle
+  3  #035  Rev holo    Clefairy               slot  66  Top Right
+  4  #036  Regular     Clefable               slot  67  Middle Left
+  5  #036  Rev holo    Clefable               slot  68  Center
+  6  #037  Regular     Vulpix                 slot  69  Middle Right
+  7  #037  Rev holo    Vulpix                 slot  70  Bottom Left
+  8  #038  Double rare Ninetales ex           slot  71  Bottom Middle
+  9  #039  Regular     Jigglypuff             slot  72  Bottom Right
+
+PAGE 9  (slots 73-81)  right-hand
+  1  #039  Rev holo    Jigglypuff             slot  73  Top Left
+  2  #040  Double rare Wigglytuff ex          slot  74  Top Middle
+  3  #041  Regular     Zubat                  slot  75  Top Right
+  4  #041  Rev holo    Zubat                  slot  76  Middle Left
+  5  #042  Regular     Golbat                 slot  77  Center
+  6  #042  Rev holo    Golbat                 slot  78  Middle Right
+  7  #043  Regular     Oddish                 slot  79  Bottom Left
+  8  #043  Rev holo    Oddish                 slot  80  Bottom Middle
+  9  #044  Regular     Gloom                  slot  81  Bottom Right
+
+PAGE 10  (slots 82-90)  left-hand
+  1  #044  Rev holo    Gloom                  slot  82  Top Left
+  2  #045  Holo        Vileplume              slot  83  Top Middle
+  3  #045  Rev holo    Vileplume              slot  84  Top Right
+  4  #046  Regular     Paras                  slot  85  Middle Left
+  5  #046  Rev holo    Paras                  slot  86  Center
+  6  #047  Regular     Parasect               slot  87  Middle Right
+  7  #047  Rev holo    Parasect               slot  88  Bottom Left
+  8  #048  Regular     Venonat                slot  89  Bottom Middle
+  9  #048  Rev holo    Venonat                slot  90  Bottom Right
+
+PAGE 11  (slots 91-99)  right-hand
+  1  #049  Regular     Venomoth               slot  91  Top Left
+  2  #049  Rev holo    Venomoth               slot  92  Top Middle
+  3  #050  Regular     Diglett                slot  93  Top Right
+  4  #050  Rev holo    Diglett                slot  94  Middle Left
+  5  #051  Regular     Dugtrio                slot  95  Center
+  6  #051  Rev holo    Dugtrio                slot  96  Middle Right
+  7  #052  Regular     Meowth                 slot  97  Bottom Left
+  8  #052  Rev holo    Meowth                 slot  98  Bottom Middle
+  9  #053  Regular     Persian                slot  99  Bottom Right
+
+PAGE 12  (slots 100-108)  left-hand
+  1  #053  Rev holo    Persian                slot 100  Top Left
+  2  #054  Regular     Psyduck                slot 101  Top Middle
+  3  #054  Rev holo    Psyduck                slot 102  Top Right
+  4  #055  Regular     Golduck                slot 103  Middle Left
+  5  #055  Rev holo    Golduck                slot 104  Center
+  6  #056  Regular     Mankey                 slot 105  Middle Right
+  7  #056  Rev holo    Mankey                 slot 106  Bottom Left
+  8  #057  Regular     Primeape               slot 107  Bottom Middle
+  9  #057  Rev holo    Primeape               slot 108  Bottom Right
+
+PAGE 13  (slots 109-117)  right-hand
+  1  #058  Regular     Growlithe              slot 109  Top Left
+  2  #058  Rev holo    Growlithe              slot 110  Top Middle
+  3  #059  Regular     Arcanine               slot 111  Top Right
+  4  #059  Rev holo    Arcanine               slot 112  Middle Left
+  5  #060  Regular     Poliwag                slot 113  Center
+  6  #060  Rev holo    Poliwag                slot 114  Middle Right
+  7  #061  Regular     Poliwhirl              slot 115  Bottom Left
+  8  #061  Rev holo    Poliwhirl              slot 116  Bottom Middle
+  9  #062  Regular     Poliwrath              slot 117  Bottom Right
+
+PAGE 14  (slots 118-126)  left-hand
+  1  #062  Rev holo    Poliwrath              slot 118  Top Left
+  2  #063  Regular     Abra                   slot 119  Top Middle
+  3  #063  Rev holo    Abra                   slot 120  Top Right
+  4  #064  Regular     Kadabra                slot 121  Middle Left
+  5  #064  Rev holo    Kadabra                slot 122  Center
+  6  #065  Double rare Alakazam ex            slot 123  Middle Right
+  7  #066  Regular     Machop                 slot 124  Bottom Left
+  8  #066  Rev holo    Machop                 slot 125  Bottom Middle
+  9  #067  Regular     Machoke                slot 126  Bottom Right
+
+PAGE 15  (slots 127-135)  right-hand
+  1  #067  Rev holo    Machoke                slot 127  Top Left
+  2  #068  Holo        Machamp                slot 128  Top Middle
+  3  #068  Rev holo    Machamp                slot 129  Top Right
+  4  #069  Regular     Bellsprout             slot 130  Middle Left
+  5  #069  Rev holo    Bellsprout             slot 131  Center
+  6  #070  Regular     Weepinbell             slot 132  Middle Right
+  7  #070  Rev holo    Weepinbell             slot 133  Bottom Left
+  8  #071  Regular     Victreebel             slot 134  Bottom Middle
+  9  #071  Rev holo    Victreebel             slot 135  Bottom Right
+
+PAGE 16  (slots 136-144)  left-hand
+  1  #072  Regular     Tentacool              slot 136  Top Left
+  2  #072  Rev holo    Tentacool              slot 137  Top Middle
+  3  #073  Regular     Tentacruel             slot 138  Top Right
+  4  #073  Rev holo    Tentacruel             slot 139  Middle Left
+  5  #074  Regular     Geodude                slot 140  Center
+  6  #074  Rev holo    Geodude                slot 141  Middle Right
+  7  #075  Regular     Graveler               slot 142  Bottom Left
+  8  #075  Rev holo    Graveler               slot 143  Bottom Middle
+  9  #076  Double rare Golem ex               slot 144  Bottom Right
+
+PAGE 17  (slots 145-153)  right-hand
+  1  #077  Regular     Ponyta                 slot 145  Top Left
+  2  #077  Rev holo    Ponyta                 slot 146  Top Middle
+  3  #078  Regular     Rapidash               slot 147  Top Right
+  4  #078  Rev holo    Rapidash               slot 148  Middle Left
+  5  #079  Regular     Slowpoke               slot 149  Center
+  6  #079  Rev holo    Slowpoke               slot 150  Middle Right
+  7  #080  Regular     Slowbro                slot 151  Bottom Left
+  8  #080  Rev holo    Slowbro                slot 152  Bottom Middle
+  9  #081  Regular     Magnemite              slot 153  Bottom Right
+
+PAGE 18  (slots 154-162)  left-hand
+  1  #081  Rev holo    Magnemite              slot 154  Top Left
+  2  #082  Regular     Magneton               slot 155  Top Middle
+  3  #082  Rev holo    Magneton               slot 156  Top Right
+  4  #083  Regular     Farfetch'd             slot 157  Middle Left
+  5  #083  Rev holo    Farfetch'd             slot 158  Center
+  6  #084  Regular     Doduo                  slot 159  Middle Right
+  7  #084  Rev holo    Doduo                  slot 160  Bottom Left
+  8  #085  Holo        Dodrio                 slot 161  Bottom Middle
+  9  #085  Rev holo    Dodrio                 slot 162  Bottom Right
+
+PAGE 19  (slots 163-171)  right-hand
+  1  #086  Regular     Seel                   slot 163  Top Left
+  2  #086  Rev holo    Seel                   slot 164  Top Middle
+  3  #087  Regular     Dewgong                slot 165  Top Right
+  4  #087  Rev holo    Dewgong                slot 166  Middle Left
+  5  #088  Regular     Grimer                 slot 167  Center
+  6  #088  Rev holo    Grimer                 slot 168  Middle Right
+  7  #089  Regular     Muk                    slot 169  Bottom Left
+  8  #089  Rev holo    Muk                    slot 170  Bottom Middle
+  9  #090  Regular     Shellder               slot 171  Bottom Right
+
+PAGE 20  (slots 172-180)  left-hand
+  1  #090  Rev holo    Shellder               slot 172  Top Left
+  2  #091  Regular     Cloyster               slot 173  Top Middle
+  3  #091  Rev holo    Cloyster               slot 174  Top Right
+  4  #092  Regular     Gastly                 slot 175  Middle Left
+  5  #092  Rev holo    Gastly                 slot 176  Center
+  6  #093  Regular     Haunter                slot 177  Middle Right
+  7  #093  Rev holo    Haunter                slot 178  Bottom Left
+  8  #094  Holo        Gengar                 slot 179  Bottom Middle
+  9  #094  Rev holo    Gengar                 slot 180  Bottom Right
+
+PAGE 21  (slots 181-189)  right-hand
+  1  #095  Regular     Onix                   slot 181  Top Left
+  2  #095  Rev holo    Onix                   slot 182  Top Middle
+  3  #096  Regular     Drowzee                slot 183  Top Right
+  4  #096  Rev holo    Drowzee                slot 184  Middle Left
+  5  #097  Regular     Hypno                  slot 185  Center
+  6  #097  Rev holo    Hypno                  slot 186  Middle Right
+  7  #098  Regular     Krabby                 slot 187  Bottom Left
+  8  #098  Rev holo    Krabby                 slot 188  Bottom Middle
+  9  #099  Regular     Kingler                slot 189  Bottom Right
+
+PAGE 22  (slots 190-198)  left-hand
+  1  #099  Rev holo    Kingler                slot 190  Top Left
+  2  #100  Regular     Voltorb                slot 191  Top Middle
+  3  #100  Rev holo    Voltorb                slot 192  Top Right
+  4  #101  Holo        Electrode              slot 193  Middle Left
+  5  #101  Rev holo    Electrode              slot 194  Center
+  6  #102  Regular     Exeggcute              slot 195  Middle Right
+  7  #102  Rev holo    Exeggcute              slot 196  Bottom Left
+  8  #103  Regular     Exeggutor              slot 197  Bottom Middle
+  9  #103  Rev holo    Exeggutor              slot 198  Bottom Right
+
+PAGE 23  (slots 199-207)  right-hand
+  1  #104  Regular     Cubone                 slot 199  Top Left
+  2  #104  Rev holo    Cubone                 slot 200  Top Middle
+  3  #105  Holo        Marowak                slot 201  Top Right
+  4  #105  Rev holo    Marowak                slot 202  Middle Left
+  5  #106  Regular     Hitmonlee              slot 203  Center
+  6  #106  Rev holo    Hitmonlee              slot 204  Middle Right
+  7  #107  Regular     Hitmonchan             slot 205  Bottom Left
+  8  #107  Rev holo    Hitmonchan             slot 206  Bottom Middle
+  9  #108  Regular     Lickitung              slot 207  Bottom Right
+
+PAGE 24  (slots 208-216)  left-hand
+  1  #108  Rev holo    Lickitung              slot 208  Top Left
+  2  #109  Regular     Koffing                slot 209  Top Middle
+  3  #109  Rev holo    Koffing                slot 210  Top Right
+  4  #110  Holo        Weezing                slot 211  Middle Left
+  5  #110  Rev holo    Weezing                slot 212  Center
+  6  #111  Regular     Rhyhorn                slot 213  Middle Right
+  7  #111  Rev holo    Rhyhorn                slot 214  Bottom Left
+  8  #112  Regular     Rhydon                 slot 215  Bottom Middle
+  9  #112  Rev holo    Rhydon                 slot 216  Bottom Right
+
+PAGE 25  (slots 217-225)  right-hand
+  1  #113  Holo        Chansey                slot 217  Top Left
+  2  #113  Rev holo    Chansey                slot 218  Top Middle
+  3  #114  Regular     Tangela                slot 219  Top Right
+  4  #114  Rev holo    Tangela                slot 220  Middle Left
+  5  #115  Double rare Kangaskhan ex          slot 221  Center
+  6  #116  Regular     Horsea                 slot 222  Middle Right
+  7  #116  Rev holo    Horsea                 slot 223  Bottom Left
+  8  #117  Regular     Seadra                 slot 224  Bottom Middle
+  9  #117  Rev holo    Seadra                 slot 225  Bottom Right
+
+PAGE 26  (slots 226-234)  left-hand
+  1  #118  Regular     Goldeen                slot 226  Top Left
+  2  #118  Rev holo    Goldeen                slot 227  Top Middle
+  3  #119  Regular     Seaking                slot 228  Top Right
+  4  #119  Rev holo    Seaking                slot 229  Middle Left
+  5  #120  Regular     Staryu                 slot 230  Center
+  6  #120  Rev holo    Staryu                 slot 231  Middle Right
+  7  #121  Holo        Starmie                slot 232  Bottom Left
+  8  #121  Rev holo    Starmie                slot 233  Bottom Middle
+  9  #122  Holo        Mr. Mime               slot 234  Bottom Right
+
+PAGE 27  (slots 235-243)  right-hand
+  1  #122  Rev holo    Mr. Mime               slot 235  Top Left
+  2  #123  Regular     Scyther                slot 236  Top Middle
+  3  #123  Rev holo    Scyther                slot 237  Top Right
+  4  #124  Double rare Jynx ex                slot 238  Middle Left
+  5  #125  Regular     Electabuzz             slot 239  Center
+  6  #125  Rev holo    Electabuzz             slot 240  Middle Right
+  7  #126  Regular     Magmar                 slot 241  Bottom Left
+  8  #126  Rev holo    Magmar                 slot 242  Bottom Middle
+  9  #127  Regular     Pinsir                 slot 243  Bottom Right
+
+PAGE 28  (slots 244-252)  left-hand
+  1  #127  Rev holo    Pinsir                 slot 244  Top Left
+  2  #128  Regular     Tauros                 slot 245  Top Middle
+  3  #128  Rev holo    Tauros                 slot 246  Top Right
+  4  #129  Regular     Magikarp               slot 247  Middle Left
+  5  #129  Rev holo    Magikarp               slot 248  Center
+  6  #130  Holo        Gyarados               slot 249  Middle Right
+  7  #130  Rev holo    Gyarados               slot 250  Bottom Left
+  8  #131  Regular     Lapras                 slot 251  Bottom Middle
+  9  #131  Rev holo    Lapras                 slot 252  Bottom Right
+
+PAGE 29  (slots 253-261)  right-hand
+  1  #132  Holo        Ditto                  slot 253  Top Left
+  2  #132  Rev holo    Ditto                  slot 254  Top Middle
+  3  #133  Regular     Eevee                  slot 255  Top Right
+  4  #133  Rev holo    Eevee                  slot 256  Middle Left
+  5  #134  Holo        Vaporeon               slot 257  Center
+  6  #134  Rev holo    Vaporeon               slot 258  Middle Right
+  7  #135  Holo        Jolteon                slot 259  Bottom Left
+  8  #135  Rev holo    Jolteon                slot 260  Bottom Middle
+  9  #136  Holo        Flareon                slot 261  Bottom Right
+
+PAGE 30  (slots 262-270)  left-hand
+  1  #136  Rev holo    Flareon                slot 262  Top Left
+  2  #137  Regular     Porygon                slot 263  Top Middle
+  3  #137  Rev holo    Porygon                slot 264  Top Right
+  4  #138  Regular     Omanyte                slot 265  Middle Left
+  5  #138  Rev holo    Omanyte                slot 266  Center
+  6  #139  Holo        Omastar                slot 267  Middle Right
+  7  #139  Rev holo    Omastar                slot 268  Bottom Left
+  8  #140  Regular     Kabuto                 slot 269  Bottom Middle
+  9  #140  Rev holo    Kabuto                 slot 270  Bottom Right
+
+PAGE 31  (slots 271-279)  right-hand
+  1  #141  Holo        Kabutops               slot 271  Top Left
+  2  #141  Rev holo    Kabutops               slot 272  Top Middle
+  3  #142  Holo        Aerodactyl             slot 273  Top Right
+  4  #142  Rev holo    Aerodactyl             slot 274  Middle Left
+  5  #143  Regular     Snorlax                slot 275  Center
+  6  #143  Rev holo    Snorlax                slot 276  Middle Right
+  7  #144  Holo        Articuno               slot 277  Bottom Left
+  8  #144  Rev holo    Articuno               slot 278  Bottom Middle
+  9  #145  Double rare Zapdos ex              slot 279  Bottom Right
+
+PAGE 32  (slots 280-288)  left-hand
+  1  #146  Holo        Moltres                slot 280  Top Left
+  2  #146  Rev holo    Moltres                slot 281  Top Middle
+  3  #147  Regular     Dratini                slot 282  Top Right
+  4  #147  Rev holo    Dratini                slot 283  Middle Left
+  5  #148  Regular     Dragonair              slot 284  Center
+  6  #148  Rev holo    Dragonair              slot 285  Middle Right
+  7  #149  Holo        Dragonite              slot 286  Bottom Left
+  8  #149  Rev holo    Dragonite              slot 287  Bottom Middle
+  9  #150  Holo        Mewtwo                 slot 288  Bottom Right
+
+PAGE 33  (slots 289-297)  right-hand
+  1  #150  Rev holo    Mewtwo                 slot 289  Top Left
+  2  #151  Double rare Mew ex                 slot 290  Top Middle
+  3  #152  Regular     Antique Dome Fossil    slot 291  Top Right
+  4  #152  Rev holo    Antique Dome Fossil    slot 292  Middle Left
+  5  #153  Regular     Antique Helix Fossil   slot 293  Center
+  6  #153  Rev holo    Antique Helix Fossil   slot 294  Middle Right
+  7  #154  Regular     Antique Old Amber      slot 295  Bottom Left
+  8  #154  Rev holo    Antique Old Amber      slot 296  Bottom Middle
+  9  #155  Regular     Big Air Balloon        slot 297  Bottom Right
+
+PAGE 34  (slots 298-306)  left-hand
+  1  #155  Rev holo    Big Air Balloon        slot 298  Top Left
+  2  #156  Regular     Bill's Transfer        slot 299  Top Middle
+  3  #156  Rev holo    Bill's Transfer        slot 300  Top Right
+  4  #157  Regular     Cycling Road           slot 301  Middle Left
+  5  #157  Rev holo    Cycling Road           slot 302  Center
+  6  #158  Regular     Daisy's Help           slot 303  Middle Right
+  7  #158  Rev holo    Daisy's Help           slot 304  Bottom Left
+  8  #159  Regular     Energy Sticker         slot 305  Bottom Middle
+  9  #159  Rev holo    Energy Sticker         slot 306  Bottom Right
+
+PAGE 35  (slots 307-315)  right-hand
+  1  #160  Regular     Erika's Invitation     slot 307  Top Left
+  2  #160  Rev holo    Erika's Invitation     slot 308  Top Middle
+  3  #161  Regular     Giovanni's Charisma    slot 309  Top Right
+  4  #161  Rev holo    Giovanni's Charisma    slot 310  Middle Left
+  5  #162  Regular     Grabber                slot 311  Center
+  6  #162  Rev holo    Grabber                slot 312  Middle Right
+  7  #163  Regular     Leftovers              slot 313  Bottom Left
+  8  #163  Rev holo    Leftovers              slot 314  Bottom Middle
+  9  #164  Regular     Protective Goggles     slot 315  Bottom Right
+
+PAGE 36  (slots 316-324)  left-hand
+  1  #164  Rev holo    Protective Goggles     slot 316  Top Left
+  2  #165  Regular     Rigid Band             slot 317  Top Middle
+  3  #165  Rev holo    Rigid Band             slot 318  Top Right
+  4  #166  Secret      Bulbasaur              slot 319  Middle Left
+  5  #167  Secret      Ivysaur                slot 320  Center
+  6  #168  Secret      Charmander             slot 321  Middle Right
+  7  #169  Secret      Charmeleon             slot 322  Bottom Left
+  8  #170  Secret      Squirtle               slot 323  Bottom Middle
+  9  #171  Secret      Wartortle              slot 324  Bottom Right
+
+PAGE 37  (slots 325-333)  right-hand
+  1  #172  Secret      Caterpie               slot 325  Top Left
+  2  #173  Secret      Pikachu                slot 326  Top Middle
+  3  #174  Secret      Nidoking               slot 327  Top Right
+  4  #175  Secret      Psyduck                slot 328  Middle Left
+  5  #176  Secret      Poliwhirl              slot 329  Center
+  6  #177  Secret      Machoke                slot 330  Middle Right
+  7  #178  Secret      Tangela                slot 331  Bottom Left
+  8  #179  Secret      Mr. Mime               slot 332  Bottom Middle
+  9  #180  Secret      Omanyte                slot 333  Bottom Right
+
+PAGE 38  (slots 334-342)  left-hand
+  1  #181  Secret      Dragonair              slot 334  Top Left
+  2  #182  Secret      Venusaur ex            slot 335  Top Middle
+  3  #183  Secret      Charizard ex           slot 336  Top Right
+  4  #184  Secret      Blastoise ex           slot 337  Middle Left
+  5  #185  Secret      Arbok ex               slot 338  Center
+  6  #186  Secret      Ninetales ex           slot 339  Middle Right
+  7  #187  Secret      Wigglytuff ex          slot 340  Bottom Left
+  8  #188  Secret      Alakazam ex            slot 341  Bottom Middle
+  9  #189  Secret      Golem ex               slot 342  Bottom Right
+
+PAGE 39  (slots 343-351)  right-hand
+  1  #190  Secret      Kangaskhan ex          slot 343  Top Left
+  2  #191  Secret      Jynx ex                slot 344  Top Middle
+  3  #192  Secret      Zapdos ex              slot 345  Top Right
+  4  #193  Secret      Mew ex                 slot 346  Middle Left
+  5  #194  Secret      Bill's Transfer        slot 347  Center
+  6  #195  Secret      Daisy's Help           slot 348  Middle Right
+  7  #196  Secret      Erika's Invitation     slot 349  Bottom Left
+  8  #197  Secret      Giovanni's Charisma    slot 350  Bottom Middle
+  9  #198  Secret      Venusaur ex            slot 351  Bottom Right
+
+PAGE 40  (slots 352-360)  left-hand
+  1  #199  Secret      Charizard ex           slot 352  Top Left
+  2  #200  Secret      Blastoise ex           slot 353  Top Middle
+  3  #201  Secret      Alakazam ex            slot 354  Top Right
+  4  #202  Secret      Zapdos ex              slot 355  Middle Left
+  5  #203  Secret      Erika's Invitation     slot 356  Center
+  6  #204  Secret      Giovanni's Charisma    slot 357  Middle Right
+  7  #205  Secret      Mew ex                 slot 358  Bottom Left
+  8  #206  Secret      Switch                 slot 359  Bottom Middle
+  9  #207  Secret      Basic Psychic Energy   slot 360  Bottom Right
