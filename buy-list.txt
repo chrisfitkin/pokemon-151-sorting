@@ -1,6 +1,6 @@
 BUY LIST - Pokemon SV 151 master set binder
-Owned 127/360. Confirmed missing 134 across pages 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 36, 37, 38, 39, 40.
-Pages 25-35 were not photographed: 99 pockets unknown, not listed below.
+Owned 168/360. Confirmed missing 183 across pages 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 35, 36, 37, 38, 39, 40.
+Page 34 not photographed: 9 pockets unknown, not listed below.
 
 NEED BOTH PRINTINGS
   #002  Ivysaur                Regular + Rev holo   (p1 sp3, p1 sp4)
@@ -28,6 +28,15 @@ NEED BOTH PRINTINGS
   #097  Hypno                  Regular + Rev holo   (p21 sp5, p21 sp6)
   #103  Exeggutor              Regular + Rev holo   (p22 sp8, p22 sp9)
   #107  Hitmonchan             Regular + Rev holo   (p23 sp7, p23 sp8)
+  #116  Horsea                 Regular + Rev holo   (p25 sp6, p25 sp7)
+  #118  Goldeen                Regular + Rev holo   (p26 sp1, p26 sp2)
+  #119  Seaking                Regular + Rev holo   (p26 sp3, p26 sp4)
+  #121  Starmie                Holo + Rev holo   (p26 sp7, p26 sp8)
+  #127  Pinsir                 Regular + Rev holo   (p27 sp9, p28 sp1)
+  #142  Aerodactyl             Holo + Rev holo   (p31 sp3, p31 sp4)
+  #143  Snorlax                Regular + Rev holo   (p31 sp5, p31 sp6)
+  #152  Antique Dome Fossil    Regular + Rev holo   (p33 sp3, p33 sp4)
+  #154  Antique Old Amber      Regular + Rev holo   (p33 sp7, p33 sp8)
 
 NEED ONE PRINTING
   #001  Bulbasaur              Regular      (p1 sp1)
@@ -92,6 +101,37 @@ NEED ONE PRINTING
   #108  Lickitung              Rev holo     (p24 sp1)
   #109  Koffing                Rev holo     (p24 sp3)
   #112  Rhydon                 Rev holo     (p24 sp9)
+  #113  Chansey                Holo         (p25 sp1)
+  #115  Kangaskhan ex          Double rare  (p25 sp5)
+  #120  Staryu                 Rev holo     (p26 sp6)
+  #122  Mr. Mime               Holo         (p26 sp9)
+  #123  Scyther                Regular      (p27 sp2)
+  #124  Jynx ex                Double rare  (p27 sp4)
+  #125  Electabuzz             Rev holo     (p27 sp6)
+  #128  Tauros                 Regular      (p28 sp2)
+  #129  Magikarp               Rev holo     (p28 sp5)
+  #130  Gyarados               Rev holo     (p28 sp7)
+  #131  Lapras                 Regular      (p28 sp8)
+  #132  Ditto                  Holo         (p29 sp1)
+  #133  Eevee                  Rev holo     (p29 sp4)
+  #134  Vaporeon               Rev holo     (p29 sp6)
+  #136  Flareon                Rev holo     (p30 sp1)
+  #138  Omanyte                Regular      (p30 sp4)
+  #139  Omastar                Rev holo     (p30 sp7)
+  #140  Kabuto                 Rev holo     (p30 sp9)
+  #141  Kabutops               Holo         (p31 sp1)
+  #144  Articuno               Holo         (p31 sp7)
+  #145  Zapdos ex              Double rare  (p31 sp9)
+  #147  Dratini                Regular      (p32 sp3)
+  #149  Dragonite              Rev holo     (p32 sp8)
+  #150  Mewtwo                 Holo         (p32 sp9)
+  #151  Mew ex                 Double rare  (p33 sp2)
+  #153  Antique Helix Fossil   Rev holo     (p33 sp6)
+  #160  Erika's Invitation     Rev holo     (p35 sp2)
+  #161  Giovanni's Charisma    Rev holo     (p35 sp4)
+  #162  Grabber                Regular      (p35 sp5)
+  #163  Leftovers              Rev holo     (p35 sp8)
+  #164  Protective Goggles     Regular      (p35 sp9)
   #174  Nidoking               Secret       (p37 sp3)
   #175  Psyduck                Secret       (p37 sp4)
   #176  Poliwhirl              Secret       (p37 sp5)
@@ -115,5 +155,5 @@ NEED ONE PRINTING
   #206  Switch                 Secret       (p40 sp8)
   #207  Basic Psychic Energy   Secret       (p40 sp9)
 
-NOT YET PHOTOGRAPHED - pages 25 to 35
-  #113 Chansey through #164 Protective Goggles  (99 pockets)
+NOT YET PHOTOGRAPHED - page 34
+  #155 Big Air Balloon through #159 Energy Sticker  (9 pockets)
