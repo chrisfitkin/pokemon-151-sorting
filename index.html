@@ -46,6 +46,10 @@ body{
 }
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 button,input{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+/* a tap or drag on a control is a press, never the start of a text selection,
+   and a long press must not raise the iOS callout. Text outside controls stays
+   selectable so a card name can still be copied. */
+button{-webkit-user-select:none; user-select:none; -webkit-touch-callout:none}
 :focus-visible{outline:2px solid var(--red); outline-offset:2px; border-radius:3px}
 
 .app{max-width:540px; margin:0 auto}
