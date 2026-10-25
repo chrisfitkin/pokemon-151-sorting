@@ -65,6 +65,8 @@ button{-webkit-user-select:none; user-select:none; -webkit-touch-callout:none}
 .keytog{flex:none; padding:6px 9px; border-radius:8px; border:1px solid var(--line); background:var(--panel);
   font-family:var(--mono); font-size:10.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--dim)}
 .keytog:hover{color:var(--red-ink); border-color:var(--red)}
+.fxtog{padding:6px 8px; font-size:13px; line-height:1}
+body.nofx .fxtog{color:var(--faint); border-style:dashed}
 /* once the pad is hidden the way back has to be obvious */
 body.nokeys .keytog{color:var(--red-ink); border-color:var(--red)}
 
@@ -310,6 +312,7 @@ body.nokeys .fab{display:grid}
         <button role="tab" id="tab-card" aria-selected="true" data-mode="card">Card</button>
         <button role="tab" id="tab-page" aria-selected="false" data-mode="page">Page</button>
       </div>
+      <button class="keytog fxtog" id="fxtog" aria-pressed="true" aria-label="Tap feedback">&#9834;</button>
       <button class="keytog" id="keytog" aria-pressed="true">Hide</button>
     </div>
     <div class="field">
@@ -625,6 +628,54 @@ out.addEventListener("pointerdown", e => { if (!e.target.closest("button")) auto
 
 const fab = document.getElementById("fab");
 fab.addEventListener("click", () => setKeys(true, true));
+
+/* ---------- tap feedback ---------- */
+// One channel per platform: a real haptic where the device offers one, and a
+// synthesised click where it does not. iOS Safari exposes no Vibration API at
+// all, so the click is what lands there -- and iOS plays Web Audio in the
+// ambient category, so the ring switch silences it. Nothing to detect that by.
+const fxtog = document.getElementById("fxtog");
+let fxOn = true;
+try { fxOn = localStorage.getItem("binder.fx") !== "0"; } catch (e) {}
+const canBuzz = typeof navigator.vibrate === "function";
+
+let actx = null;
+function clickTone(){
+  try {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return;
+    actx = actx || new AC();
+    if (actx.state === "suspended") actx.resume();
+    const t = actx.currentTime;
+    const osc = actx.createOscillator(), gain = actx.createGain();
+    osc.type = "triangle";
+    osc.frequency.setValueAtTime(1150, t);
+    osc.frequency.exponentialRampToValueAtTime(620, t + 0.025);
+    gain.gain.setValueAtTime(0.0001, t);
+    gain.gain.exponentialRampToValueAtTime(0.05, t + 0.003);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.028);
+    osc.connect(gain).connect(actx.destination);
+    osc.start(t); osc.stop(t + 0.032);
+  } catch (e) {}
+}
+function fxTap(){
+  if (!fxOn) return;
+  if (canBuzz) { try { navigator.vibrate(8); } catch (e) {} }
+  else clickTone();
+}
+function setFx(on, remember){
+  fxOn = on;
+  document.body.classList.toggle("nofx", !on);
+  fxtog.setAttribute("aria-pressed", String(on));
+  if (remember) { try { localStorage.setItem("binder.fx", on ? "1" : "0"); } catch (e) {} }
+}
+// capture, so every button in the app fires it without each handler opting in,
+// and on press rather than release, which is where a tap wants to be answered
+document.addEventListener("pointerdown", e => {
+  if (e.target.closest("button")) fxTap();
+}, true);
+fxtog.addEventListener("click", () => setFx(!fxOn, true));
+setFx(fxOn, false);
 
 /* ---------- swipe between binder pages ---------- */
 // which page the results area is showing right now, or 0 if it is not a page view
