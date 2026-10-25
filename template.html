@@ -14,7 +14,7 @@
   --ink:#12171A; --dim:#556168; --faint:#6E7A80; --line:#CCD4D8; --line-soft:#DDE3E6;
   --red:#BE3325; --red-ink:#BE3325; --red-soft:#F5DED9;
   --holo:#8A6317; --holo-ink:#7A5713; --holo-soft:#F2E6CB;
-  --pocket:#DDE4E7; --pocket-line:#BAC5CB; --crease:rgba(0,0,0,.5);
+  --pocket:#DDE4E7; --pocket-line:#BAC5CB; --crease:rgba(0,0,0,.5); --ok:#1F7A55; --ok-soft:#DCEFE6;
   --shadow:0 1px 0 rgba(18,23,26,.04), 0 6px 22px -14px rgba(18,23,26,.45);
   --disp:'Archivo', 'Helvetica Neue', Arial, sans-serif;
   --mono:'PlexMono', ui-monospace, Menlo, Consolas, monospace;
@@ -26,6 +26,7 @@
     --red:#F2604F; --red-ink:#F2604F; --red-soft:#381914;
     --holo:#EFC069; --holo-ink:#E5B662; --holo-soft:#2C2313; --pocket:#2B353B; --pocket-line:#3E4A52;
     --crease:rgba(0,0,0,.92);
+    --ok:#58D3A0; --ok-soft:#103125;
     --shadow:0 1px 0 rgba(0,0,0,.3), 0 8px 24px -16px rgba(0,0,0,.9);
   }
 }
@@ -35,6 +36,7 @@
   --red:#F2604F; --red-ink:#F2604F; --red-soft:#381914;
   --holo:#EFC069; --holo-ink:#E5B662; --holo-soft:#2C2313; --pocket:#2B353B; --pocket-line:#3E4A52;
   --crease:rgba(0,0,0,.92);
+  --ok:#58D3A0; --ok-soft:#103125;
   --shadow:0 1px 0 rgba(0,0,0,.3), 0 8px 24px -16px rgba(0,0,0,.9);
 }
 
@@ -67,6 +69,7 @@ button{-webkit-user-select:none; user-select:none; -webkit-touch-callout:none}
 .keytog:hover{color:var(--red-ink); border-color:var(--red)}
 .fxtog{padding:6px 8px; font-size:13px; line-height:1}
 body.nofx .fxtog{color:var(--faint); border-style:dashed}
+body.marking .owntog{color:var(--ok); border-color:var(--ok); background:var(--ok-soft)}
 /* once the pad is hidden the way back has to be obvious */
 body.nokeys .keytog{color:var(--red-ink); border-color:var(--red)}
 
@@ -235,6 +238,45 @@ button.pkt:active{transform:scale(.94)}
 .pocket.hi{border-color:var(--red); box-shadow:0 0 0 2px var(--red-soft)}
 .pocket.rh.hi{box-shadow:inset 0 3px 0 var(--holo), 0 0 0 2px var(--red-soft)}
 
+/* ---------- owned ---------- */
+/* a filled pocket is stated once, quietly: a tick and a tinted edge, never a
+   colour swap that would fight the holo and secret cues already in the grid */
+.pocket{position:relative}
+.pocket.got{border-color:var(--ok)}
+/* the box has to be described once for both states: give it only to .got and the
+   empty one lands in the flex flow as a bar across the bottom of the pocket */
+.pocket.got::after,
+body.marking .pocket::after{
+  content:""; position:absolute; top:3px; right:4px; width:13px; height:13px;
+  display:grid; place-items:center; border-radius:50%; box-sizing:border-box;
+  font-size:9px; font-weight:700; line-height:1;
+}
+.pocket.got::after{content:"\2713"; background:var(--ok); color:var(--panel)}
+/* in Own mode every pocket shows its checkbox, so the empty ones read as targets */
+body.marking .pocket:not(.got)::after{background:none; border:1.5px dashed var(--pocket-line)}
+body.marking .sheet{outline:2px solid var(--ok); outline-offset:-1px; border-radius:8px}
+.tick{
+  font-family:var(--mono); font-size:10px; font-variant-numeric:tabular-nums; color:var(--faint);
+  border:1px solid var(--line-soft); border-radius:6px; padding:3px 6px; margin-left:auto;
+}
+.tick.full{color:var(--ok); border-color:var(--ok); background:var(--ok-soft); font-weight:600}
+.loc .own{
+  margin-top:8px; align-self:flex-start; padding:5px 9px; border-radius:7px;
+  border:1px solid var(--line); background:var(--panel);
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--dim);
+}
+.loc.got .own{border-color:var(--ok); background:var(--ok-soft); color:var(--ok); font-weight:600}
+.bar2{height:7px; border-radius:4px; background:var(--sunk); border:1px solid var(--line-soft); overflow:hidden}
+.bar2 i{display:block; height:100%; background:var(--ok); border-radius:4px}
+.prog{margin:9px 0 0; font-family:var(--disp); font-stretch:80%; font-size:14px; color:var(--dim)}
+.prog b{font-family:var(--mono); font-size:13px; color:var(--ink)}
+.acts{display:flex; gap:7px; margin-top:11px}
+.acts button{
+  padding:7px 10px; border-radius:8px; border:1px solid var(--line); background:var(--panel);
+  font-family:var(--mono); font-size:10px; letter-spacing:.05em; text-transform:uppercase; color:var(--dim);
+}
+.acts button:hover{border-color:var(--red); color:var(--red-ink)}
+
 /* results list */
 .list{display:flex; flex-direction:column}
 .row{
@@ -312,6 +354,7 @@ body.nokeys .fab{display:grid}
         <button role="tab" id="tab-card" aria-selected="true" data-mode="card">Card</button>
         <button role="tab" id="tab-page" aria-selected="false" data-mode="page">Page</button>
       </div>
+      <button class="keytog owntog" id="owntog" aria-pressed="false">Own</button>
       <button class="keytog fxtog" id="fxtog" aria-pressed="true" aria-label="Tap feedback">&#9834;</button>
       <button class="keytog" id="keytog" aria-pressed="true">Hide</button>
     </div>
@@ -418,6 +461,34 @@ function search(term){
   return hits.map(h => h.n);
 }
 
+/* ---------- owned pockets ---------- */
+// A collection is worth nothing if it evaporates. Safari evicts localStorage for
+// a site you have not opened in 7 days, so the set is also encodable into the URL
+// as 360 bits of base64: one link is a backup that outlives the browser.
+let owned = new Set();
+const ownedBits = () => { let s = ""; for (let i = 1; i <= TOTAL; i++) s += owned.has(i) ? "1" : "0"; return s; };
+const bitsToSet = s => { const o = new Set(); for (let i = 0; i < s.length && i < TOTAL; i++) if (s[i] === "1") o.add(i + 1); return o; };
+function ownedB64(){
+  const s = ownedBits(); let bin = "";
+  for (let i = 0; i < s.length; i += 8) bin += String.fromCharCode(parseInt(s.slice(i, i + 8).padEnd(8, "0"), 2));
+  return btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+function fromB64(b){
+  try {
+    const bin = atob(b.replace(/-/g, "+").replace(/_/g, "/"));
+    let s = "";
+    for (let i = 0; i < bin.length; i++) s += bin.charCodeAt(i).toString(2).padStart(8, "0");
+    return bitsToSet(s);
+  } catch (e) { return null; }
+}
+function saveOwned(){ try { localStorage.setItem("binder.owned", ownedBits()); } catch (e) {} }
+function loadOwned(){
+  const m = location.hash.match(/o=([A-Za-z0-9_-]+)/);
+  if (m){ const o = fromB64(m[1]); if (o){ owned = o; saveOwned(); return; } }
+  try { owned = bitsToSet(localStorage.getItem("binder.owned") || ""); } catch (e) {}
+}
+const haveOnPage = p => { let n = 0; for (let i = 0; i < 9; i++) if (owned.has((p - 1) * 9 + 1 + i)) n++; return n; };
+
 /* ---------- rendering ---------- */
 const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 const pad3 = n => String(n).padStart(3, "0");
@@ -444,11 +515,14 @@ function locPanel(slot, kind, n){
   const cls = kind === "rh" ? "loc rh" : "loc";
   const label = kind === "rh" ? "Reverse Holo" : baseLabel(n);
   const p = page(slot), s = spot(slot);
-  return '<section class="' + cls + '">' +
+  const have = owned.has(slot);
+  return '<section class="' + cls + (have ? " got" : "") + '">' +
     '<div class="stripe"><span class="dot"></span><p>' + label + '</p><s>' + slot + '</s></div>' +
     '<div class="readout"><span class="k">Page</span><span class="v">' + p + '</span></div>' +
     '<p class="spotline">' + SPOTS[s - 1] + '<em>Spot ' + s + ' of 9</em></p>' +
     glyph(s, slot) +
+    '<button class="own" data-own="' + slot + '" aria-pressed="' + have + '">' +
+      (have ? "&#10003; Have it" : "Mark as owned") + '</button>' +
     '</section>';
 }
 
@@ -493,9 +567,11 @@ function cardView(n){
 
 function pageView(p, hi){
   const start = (p - 1) * 9 + 1;
+  const got = haveOnPage(p);
   let html = '<article class="panel">' +
     '<div class="pghead">' +
       '<h1><i>Binder page &middot; slots ' + start + "&ndash;" + (start + 8) + '</i>' + p + '</h1>' +
+      '<span class="tick' + (got === 9 ? " full" : "") + '">' + got + '/9</span>' +
       '<div class="step">' +
         '<button data-page="' + (p - 1) + '"' + (p <= 1 ? " disabled" : "") + ' aria-label="Previous page">&#8592;</button>' +
         '<button data-page="' + (p + 1) + '"' + (p >= PAGES ? " disabled" : "") + ' aria-label="Next page">&#8594;</button>' +
@@ -504,7 +580,8 @@ function pageView(p, hi){
 
   for (let i = 0; i < 9; i++){
     const s = start + i, e = atSlot[s], c = card(e.n);
-    html += '<button class="pocket' + (e.rh ? " rh" : "") + (s === hi ? " hi" : "") + '" data-card="' + e.n + '">' +
+    html += '<button class="pocket' + (e.rh ? " rh" : "") + (s === hi ? " hi" : "") +
+      (owned.has(s) ? " got" : "") + '" data-card="' + e.n + '" data-slot2="' + s + '">' +
       '<span class="sp">' + (i + 1) + " &middot; " + SPOTS[i] + '</span>' +
       '<span class="cn">#' + pad3(e.n) + '</span>' +
       '<span class="nm">' + esc(c.name) + '</span>' +
@@ -555,7 +632,14 @@ function home(){
       '<div><b>153</b><span>Rev holo</span></div>' +
       '<div><b>42</b><span>Secret</span></div>' +
       '<div><b>360</b><span>Pockets</span></div>' +
-    '</div></div>';
+    '</div></div>' +
+    '<div class="panel legend"><h2>Your collection</h2>' +
+      '<div class="bar2"><i style="width:' + (owned.size / TOTAL * 100).toFixed(2) + '%"></i></div>' +
+      '<p class="prog"><b>' + owned.size + '</b> of 360 pockets filled' +
+        (owned.size ? ' &middot; <b>' + (TOTAL - owned.size) + '</b> to go' : '') + '</p>' +
+      '<div class="acts"><button id="backup">Copy backup link</button>' +
+        (owned.size ? '<button id="wipeowned">Clear</button>' : '') + '</div>' +
+    '</div>';
 }
 
 function render(){
@@ -750,6 +834,17 @@ document.getElementById("keys").addEventListener("click", e => {
 out.addEventListener("click", e => {
   // a swipe that ends on a pocket still fires a click; that is navigation already done
   if (Date.now() - lastSwipe < 400) return;
+
+  const act = e.target.closest("#backup,#wipeowned,[data-own]");
+  if (act){
+    if (act.id === "backup") return copyBackup(act);
+    if (act.id === "wipeowned") return clearOwned();
+    return toggleOwned(+act.dataset.own);
+  }
+  // in Own mode a pocket is a checkbox, not a link: you are logging, not looking up
+  const pk = e.target.closest("[data-slot2]");
+  if (pk && document.body.classList.contains("marking")) return toggleOwned(+pk.dataset.slot2);
+
   const t = e.target.closest("[data-card],[data-page],[data-slot]");
   if (!t) return;
   if (t.dataset.card){
@@ -766,6 +861,32 @@ out.addEventListener("click", e => {
   window.scrollTo({top:0, behavior:"smooth"});
 });
 
+/* ---------- owned: actions ---------- */
+function toggleOwned(slot){
+  if (!slot) return;
+  if (owned.has(slot)) owned.delete(slot); else owned.add(slot);
+  saveOwned();
+  draw();            // not render(): marking is not typing, so leave the stale timer alone
+}
+function clearOwned(){
+  if (!confirm("Clear all " + owned.size + " owned marks? This cannot be undone.")) return;
+  owned = new Set(); saveOwned(); draw();
+}
+function copyBackup(btn){
+  const url = location.origin + location.pathname + "#o=" + ownedB64();
+  const done = ok => { btn.textContent = ok ? "Link copied" : "Copy failed"; setTimeout(() => { btn.textContent = "Copy backup link"; }, 1800); };
+  try { navigator.clipboard.writeText(url).then(() => done(true), () => done(false)); }
+  catch (e) { done(false); }
+}
+const owntog = document.getElementById("owntog");
+function setMarking(on){
+  document.body.classList.toggle("marking", on);
+  owntog.setAttribute("aria-pressed", String(on));
+  owntog.textContent = on ? "Done" : "Own";
+}
+owntog.addEventListener("click", () => setMarking(!document.body.classList.contains("marking")));
+
+loadOwned();
 hint.innerHTML = HINTS.card;
 q.placeholder = PLACEHOLDER.card;
 let keysOn = true;
