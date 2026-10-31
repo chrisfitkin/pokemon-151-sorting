@@ -1,0 +1,1742 @@
+{
+"set": {
+"name": "Attack of the Vine!",
+"code": "13",
+"number": 13,
+"releaseDate": "2026-07-24",
+"source": "lorcanajson.org setdata.13.json",
+"formatVersion": "2.4.0",
+"generatedOn": "2026-10-16T16:43:42"
+},
+"data": [
+{
+"number": 1,
+"name": "Woody - Helping a Friend",
+"rarity": "Rare",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 2,
+"name": "Ming Lee - Proud Parent",
+"rarity": "Rare",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 3,
+"name": "Isabela Madrigal - Kind Cultivator",
+"rarity": "Common",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 4,
+"name": "Tyler Nguyen-Baker - 4*Town Fan",
+"rarity": "Common",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 5,
+"name": "Rabbit - Hunny Paladin",
+"rarity": "Uncommon",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 6,
+"name": "Celia Mae - Friendly Receptionist",
+"rarity": "Uncommon",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 7,
+"name": "Meilin Lee - Lead Vocalist",
+"rarity": "Uncommon",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 8,
+"name": "Priya Mangal - Serious Music Lover",
+"rarity": "Common",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 9,
+"name": "Miriam Mendelsohn - Ticket Holder",
+"rarity": "Common",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 10,
+"name": "Lilo - Patient Weaver",
+"rarity": "Common",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 11,
+"name": "Kocoum - Defender of the Tribe",
+"rarity": "Common",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 12,
+"name": "Pocahontas - Guiding the Tribe",
+"rarity": "Rare",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 13,
+"name": "Woody - Town Sheriff",
+"rarity": "Common",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 14,
+"name": "Abby Park - Over the Top",
+"rarity": "Uncommon",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 15,
+"name": "Gaston - Superior Archer",
+"rarity": "Uncommon",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 16,
+"name": "Meilin Lee - Losing Control",
+"rarity": "Rare",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 17,
+"name": "4*Town - Hottest Band of the Year",
+"rarity": "Rare",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 18,
+"name": "Mike Wazowski - Heroic Climber",
+"rarity": "Super Rare",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 19,
+"name": "Boo - In Disguise",
+"rarity": "Uncommon",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 20,
+"name": "Jasmine - Vine Expert",
+"rarity": "Common",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 21,
+"name": "Mike Wazowski - Well-Rounded Entertainer",
+"rarity": "Common",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 22,
+"name": "The Horned King - Merciless Master",
+"rarity": "Legendary",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 23,
+"name": "Kanga - Hunny Bard",
+"rarity": "Common",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 24,
+"name": "Sulley - The New Boss",
+"rarity": "Super Rare",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 25,
+"name": "Mirabel Madrigal - Family Guardian",
+"rarity": "Rare",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 26,
+"name": "Ursula - Created by the Vine",
+"rarity": "Rare",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 27,
+"name": "Pocahontas & Meeko - Adventurous Friends",
+"rarity": "Legendary",
+"color": "Amber-Amethyst",
+"type": "Character"
+},
+{
+"number": 28,
+"name": "Woody & Buzz Lightyear - Best Buddies",
+"rarity": "Legendary",
+"color": "Amber-Emerald",
+"type": "Character"
+},
+{
+"number": 29,
+"name": "Sulley & Boo - Scare Buddies",
+"rarity": "Super Rare",
+"color": "Amber-Ruby",
+"type": "Character"
+},
+{
+"number": 30,
+"name": "The Madrigal Family - Every Generation",
+"rarity": "Rare",
+"color": "Amber-Sapphire",
+"type": "Character"
+},
+{
+"number": 31,
+"name": "Lilo & Stitch - Fun-Loving Friends",
+"rarity": "Super Rare",
+"color": "Amber-Steel",
+"type": "Character"
+},
+{
+"number": 32,
+"name": "If I Didn't Have You",
+"rarity": "Common",
+"color": "Amber",
+"type": "Action"
+},
+{
+"number": 33,
+"name": "I'm Never Not by Your Side",
+"rarity": "Uncommon",
+"color": "Amber",
+"type": "Action"
+},
+{
+"number": 34,
+"name": "Besties, Assemble!",
+"rarity": "Common",
+"color": "Amber",
+"type": "Action"
+},
+{
+"number": 35,
+"name": "Nobody Like U",
+"rarity": "Rare",
+"color": "Amber",
+"type": "Action"
+},
+{
+"number": 36,
+"name": "Powhatan's Staff",
+"rarity": "Uncommon",
+"color": "Amber",
+"type": "Item"
+},
+{
+"number": 37,
+"name": "Rapunzel's Tower - Taken by the Vine",
+"rarity": "Uncommon",
+"color": "Amber",
+"type": "Location"
+},
+{
+"number": 38,
+"name": "Fflewddur Fflam - Luckless Bard",
+"rarity": "Common",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 39,
+"name": "Maleficent - Exultant Spellcaster",
+"rarity": "Common",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 40,
+"name": "Winnie the Pooh - Hunny Archmage",
+"rarity": "Common",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 41,
+"name": "Panic - Hammer Enthusiast",
+"rarity": "Common",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 42,
+"name": "Lumpy - Hunny Druid",
+"rarity": "Uncommon",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 43,
+"name": "Abu - Wise Sultan",
+"rarity": "Uncommon",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 44,
+"name": "Meilin Lee - Superficially Obedient",
+"rarity": "Common",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 45,
+"name": "Genie - Hard to Grasp",
+"rarity": "Uncommon",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 46,
+"name": "Vixey - Expert Fisher",
+"rarity": "Rare",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 47,
+"name": "Meeko - Lucky Raccoon",
+"rarity": "Common",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 48,
+"name": "Pain - Running with Scissors",
+"rarity": "Common",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 49,
+"name": "Ming Lee - Overprotective Parent",
+"rarity": "Rare",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 50,
+"name": "Merida - Wisp Conjurer",
+"rarity": "Legendary",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 51,
+"name": "Mrs. Incredible - Created by the Vine",
+"rarity": "Rare",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 52,
+"name": "Pete - Created by the Vine",
+"rarity": "Common",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 53,
+"name": "Grandma Wu - Wise Grandmother",
+"rarity": "Rare",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 54,
+"name": "HeiHei - Created by the Vine",
+"rarity": "Rare",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 55,
+"name": "Hera - Created by the Vine",
+"rarity": "Uncommon",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 56,
+"name": "Tinker Bell - Finding a Way",
+"rarity": "Uncommon",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 57,
+"name": "Morph - Little Imitator",
+"rarity": "Uncommon",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 58,
+"name": "Peter Pan - Playful Prankster",
+"rarity": "Common",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 59,
+"name": "Aladdin & Genie - Mischievous Pals",
+"rarity": "Super Rare",
+"color": "Amethyst-Emerald",
+"type": "Character"
+},
+{
+"number": 60,
+"name": "Peter Pan & Tinker Bell - Fast Friends",
+"rarity": "Super Rare",
+"color": "Amethyst-Ruby",
+"type": "Character"
+},
+{
+"number": 61,
+"name": "Christopher Robin - Hunny Sage",
+"rarity": "Legendary",
+"color": "Amethyst-Sapphire",
+"type": "Character"
+},
+{
+"number": 62,
+"name": "Winnie the Pooh & Piglet - Hunny Mages",
+"rarity": "Super Rare",
+"color": "Amethyst-Sapphire",
+"type": "Character"
+},
+{
+"number": 63,
+"name": "Maleficent & Diablo - Evil Incarnate",
+"rarity": "Rare",
+"color": "Amethyst-Steel",
+"type": "Character"
+},
+{
+"number": 64,
+"name": "You've Got Some Punch",
+"rarity": "Common",
+"color": "Amethyst",
+"type": "Action"
+},
+{
+"number": 65,
+"name": "With a Few Good Friends",
+"rarity": "Rare",
+"color": "Amethyst",
+"type": "Action"
+},
+{
+"number": 66,
+"name": "Petrify",
+"rarity": "Common",
+"color": "Amethyst",
+"type": "Action"
+},
+{
+"number": 67,
+"name": "One and Only",
+"rarity": "Uncommon",
+"color": "Amethyst",
+"type": "Action"
+},
+{
+"number": 68,
+"name": "Protective Aura",
+"rarity": "Uncommon",
+"color": "Amethyst",
+"type": "Action"
+},
+{
+"number": 69,
+"name": "Narrow Escape",
+"rarity": "Common",
+"color": "Amethyst",
+"type": "Action"
+},
+{
+"number": 70,
+"name": "Broken Pod",
+"rarity": "Uncommon",
+"color": "Amethyst",
+"type": "Item"
+},
+{
+"number": 71,
+"name": "Magical Hunny Staff",
+"rarity": "Rare",
+"color": "Amethyst",
+"type": "Item"
+},
+{
+"number": 72,
+"name": "Source of the Vine",
+"rarity": "Super Rare",
+"color": "Amethyst",
+"type": "Item"
+},
+{
+"number": 73,
+"name": "Ring of Stones - Taken by the Vine",
+"rarity": "Rare",
+"color": "Amethyst",
+"type": "Location"
+},
+{
+"number": 74,
+"name": "Carl Fredricksen - Loving Husband",
+"rarity": "Uncommon",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 75,
+"name": "Ellie Fredricksen - Loving Wife",
+"rarity": "Common",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 76,
+"name": "Buzz Lightyear - Grounded",
+"rarity": "Common",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 77,
+"name": "Buzz Lightyear - Providing Cover",
+"rarity": "Rare",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 78,
+"name": "Gopher - Hunny Cook",
+"rarity": "Rare",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 79,
+"name": "Russell - Senior Wilderness Explorer",
+"rarity": "Super Rare",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 80,
+"name": "Rapunzel - Tower Defender",
+"rarity": "Common",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 81,
+"name": "Tod - Clever Fox",
+"rarity": "Uncommon",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 82,
+"name": "Russell - Junior Wilderness Explorer",
+"rarity": "Common",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 83,
+"name": "Roo - Hunny Rogue",
+"rarity": "Uncommon",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 84,
+"name": "Winifred - Exasperated Elephant",
+"rarity": "Common",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 85,
+"name": "Aladdin - Doing His Part",
+"rarity": "Common",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 86,
+"name": "Madam Mim - Hummingbird",
+"rarity": "Uncommon",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 87,
+"name": "Minnie Mouse - Curious Adventurer",
+"rarity": "Common",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 88,
+"name": "Kevin - Flightless Bird",
+"rarity": "Uncommon",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 89,
+"name": "Peter Pan - Created by the Vine",
+"rarity": "Rare",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 90,
+"name": "Copper - Creative Storyteller",
+"rarity": "Uncommon",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 91,
+"name": "Posey - Vampire Potato",
+"rarity": "Uncommon",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 92,
+"name": "Dr. Bushroot - Evil Botanist",
+"rarity": "Rare",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 93,
+"name": "Mother Gothel - Evil as Ever",
+"rarity": "Common",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 94,
+"name": "Tod & Copper - Best of Friends",
+"rarity": "Rare",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 95,
+"name": "Rapunzel - Escaping the Tower",
+"rarity": "Super Rare",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 96,
+"name": "Cetus - Mighty Serpent",
+"rarity": "Common",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 97,
+"name": "Mushu - Stealthy Dragon",
+"rarity": "Legendary",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 98,
+"name": "Carl Fredricksen & Russell - Intrepid Explorers",
+"rarity": "Rare",
+"color": "Emerald-Ruby",
+"type": "Character"
+},
+{
+"number": 99,
+"name": "Mickey Mouse & Minnie Mouse - Adventuring Duo",
+"rarity": "Legendary",
+"color": "Emerald-Sapphire",
+"type": "Character"
+},
+{
+"number": 100,
+"name": "Rapunzel & Flynn Rider - Unlikely Pair",
+"rarity": "Legendary",
+"color": "Emerald-Steel",
+"type": "Character"
+},
+{
+"number": 101,
+"name": "To Wither a Flower",
+"rarity": "Rare",
+"color": "Emerald",
+"type": "Action"
+},
+{
+"number": 102,
+"name": "Piercing Attack",
+"rarity": "Common",
+"color": "Emerald",
+"type": "Action"
+},
+{
+"number": 103,
+"name": "Put That Thing Back",
+"rarity": "Uncommon",
+"color": "Emerald",
+"type": "Action"
+},
+{
+"number": 104,
+"name": "Scout Ahead",
+"rarity": "Common",
+"color": "Emerald",
+"type": "Action"
+},
+{
+"number": 105,
+"name": "Potato",
+"rarity": "Common",
+"color": "Emerald",
+"type": "Item"
+},
+{
+"number": 106,
+"name": "My Adventure Book",
+"rarity": "Uncommon",
+"color": "Emerald",
+"type": "Item"
+},
+{
+"number": 107,
+"name": "Vine Pod",
+"rarity": "Rare",
+"color": "Emerald",
+"type": "Item"
+},
+{
+"number": 108,
+"name": "Paradise Falls - Exotic Destination",
+"rarity": "Rare",
+"color": "Emerald",
+"type": "Location"
+},
+{
+"number": 109,
+"name": "Dash Parr - Super Fast",
+"rarity": "Rare",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 110,
+"name": "Yzma - Choosy Customer",
+"rarity": "Common",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 111,
+"name": "Kuzco - Picky Customer",
+"rarity": "Uncommon",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 112,
+"name": "The Bear - Territorial Animal",
+"rarity": "Common",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 113,
+"name": "Carl Fredricksen - On the Move",
+"rarity": "Super Rare",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 114,
+"name": "Dash Parr - Dodgeball Dynamo",
+"rarity": "Common",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 115,
+"name": "Gaston - Created by the Vine",
+"rarity": "Common",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 116,
+"name": "Colonel Hathi - On the March",
+"rarity": "Common",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 117,
+"name": "Splodyhead - Experiment 619",
+"rarity": "Common",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 118,
+"name": "Pacha - Panicked Customer",
+"rarity": "Uncommon",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 119,
+"name": "Sun Yee - Red Panda Spirit",
+"rarity": "Uncommon",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 120,
+"name": "Grandma Wu - Fierce Red Panda",
+"rarity": "Rare",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 121,
+"name": "King Louie - King of Swing",
+"rarity": "Common",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 122,
+"name": "Beast - Fierce Defender",
+"rarity": "Common",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 123,
+"name": "Randall Boggs - Envious Coworker",
+"rarity": "Rare",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 124,
+"name": "Donald Duck - Vineling Rider",
+"rarity": "Common",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 125,
+"name": "Meilin Lee - Popular Red Panda",
+"rarity": "Legendary",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 126,
+"name": "Tigger - Hunny Barbarian",
+"rarity": "Rare",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 127,
+"name": "Boo - Energetic Child",
+"rarity": "Rare",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 128,
+"name": "Sulley - Protective Monster",
+"rarity": "Uncommon",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 129,
+"name": "Ming Lee - Giant Red Panda",
+"rarity": "Super Rare",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 130,
+"name": "Captain Hook - Conniving Pirate",
+"rarity": "Uncommon",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 131,
+"name": "Peter Pan - Vine Duelist",
+"rarity": "Common",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 132,
+"name": "Belle & Beast - Certain as the Sun",
+"rarity": "Super Rare",
+"color": "Ruby-Sapphire",
+"type": "Character"
+},
+{
+"number": 133,
+"name": "Dash Parr & Violet Parr - Super Siblings",
+"rarity": "Legendary",
+"color": "Ruby-Steel",
+"type": "Character"
+},
+{
+"number": 134,
+"name": "Red Moon Ritual",
+"rarity": "Uncommon",
+"color": "Ruby",
+"type": "Action"
+},
+{
+"number": 135,
+"name": "Red Alert",
+"rarity": "Uncommon",
+"color": "Ruby",
+"type": "Action"
+},
+{
+"number": 136,
+"name": "Rahr!",
+"rarity": "Common",
+"color": "Ruby",
+"type": "Action"
+},
+{
+"number": 137,
+"name": "Prophetic Vision",
+"rarity": "Uncommon",
+"color": "Ruby",
+"type": "Action"
+},
+{
+"number": 138,
+"name": "It's Gonna Be Great!",
+"rarity": "Common",
+"color": "Ruby",
+"type": "Action"
+},
+{
+"number": 139,
+"name": "Scream Canister",
+"rarity": "Uncommon",
+"color": "Ruby",
+"type": "Item"
+},
+{
+"number": 140,
+"name": "Bunch of Balloons",
+"rarity": "Rare",
+"color": "Ruby",
+"type": "Item"
+},
+{
+"number": 141,
+"name": "Beast's Castle - Overrun by the Vine",
+"rarity": "Rare",
+"color": "Ruby",
+"type": "Location"
+},
+{
+"number": 142,
+"name": "Carl's House - Flying High",
+"rarity": "Rare",
+"color": "Ruby",
+"type": "Location"
+},
+{
+"number": 143,
+"name": "Launchpad - Sky Patrol",
+"rarity": "Common",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 144,
+"name": "Dug - Good Boy",
+"rarity": "Uncommon",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 145,
+"name": "Roz - Always Watching",
+"rarity": "Common",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 146,
+"name": "Merlin - Envisioning the Future",
+"rarity": "Rare",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 147,
+"name": "Quackerjack - Loony Toymaker",
+"rarity": "Legendary",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 148,
+"name": "Belle - Always Reading",
+"rarity": "Common",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 149,
+"name": "Ellie Fredricksen - Adventure Partner",
+"rarity": "Common",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 150,
+"name": "Mrs. Hasagawa - Fruit Vendor",
+"rarity": "Uncommon",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 151,
+"name": "Alpha - Pack Leader",
+"rarity": "Rare",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 152,
+"name": "Sulley - Strategic Scarer",
+"rarity": "Common",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 153,
+"name": "Randall Boggs - Scary Smart",
+"rarity": "Rare",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 154,
+"name": "Piglet - Hunny Mage Apprentice",
+"rarity": "Common",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 155,
+"name": "Mickey Mouse - Inquisitive Explorer",
+"rarity": "Common",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 156,
+"name": "Hades - Meticulous Schemer",
+"rarity": "Uncommon",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 157,
+"name": "Antonio Madrigal - Animal Doctor",
+"rarity": "Uncommon",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 158,
+"name": "Maid Marian - Created by the Vine",
+"rarity": "Rare",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 159,
+"name": "Robin Hood - Created by the Vine",
+"rarity": "Common",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 160,
+"name": "Boo - Human Child",
+"rarity": "Rare",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 161,
+"name": "Pluto - Suspicious Sentry",
+"rarity": "Common",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 162,
+"name": "Charles Muntz - Obsessive Explorer",
+"rarity": "Super Rare",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 163,
+"name": "Henry J. Waternoose III - Chief Executive Officer",
+"rarity": "Rare",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 164,
+"name": "Eeyore - Hunny Scholar",
+"rarity": "Uncommon",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 165,
+"name": "Darkwing Duck & Launchpad - St. Canard's Finest",
+"rarity": "Super Rare",
+"color": "Sapphire-Steel",
+"type": "Character"
+},
+{
+"number": 166,
+"name": "Power Surge",
+"rarity": "Uncommon",
+"color": "Sapphire",
+"type": "Action"
+},
+{
+"number": 167,
+"name": "Focused Search",
+"rarity": "Common",
+"color": "Sapphire",
+"type": "Action"
+},
+{
+"number": 168,
+"name": "We've Got a Lot to Do!",
+"rarity": "Common",
+"color": "Sapphire",
+"type": "Action"
+},
+{
+"number": 169,
+"name": "Startle",
+"rarity": "Common",
+"color": "Sapphire",
+"type": "Action"
+},
+{
+"number": 170,
+"name": "Closet Door Portal",
+"rarity": "Super Rare",
+"color": "Sapphire",
+"type": "Item"
+},
+{
+"number": 171,
+"name": "Hana's Inkcaster",
+"rarity": "Uncommon",
+"color": "Sapphire",
+"type": "Item"
+},
+{
+"number": 172,
+"name": "Laugh Canister",
+"rarity": "Rare",
+"color": "Sapphire",
+"type": "Item"
+},
+{
+"number": 173,
+"name": "Translation Collar",
+"rarity": "Rare",
+"color": "Sapphire",
+"type": "Item"
+},
+{
+"number": 174,
+"name": "Big Book of Hunny",
+"rarity": "Uncommon",
+"color": "Sapphire",
+"type": "Item"
+},
+{
+"number": 175,
+"name": "Hundred Acre Wood - Hunny Campsite",
+"rarity": "Uncommon",
+"color": "Sapphire",
+"type": "Location"
+},
+{
+"number": 176,
+"name": "Violet Parr - Super Resilient",
+"rarity": "Super Rare",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 177,
+"name": "Aladdin - Created by the Vine",
+"rarity": "Rare",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 178,
+"name": "Willie the Giant - Created by the Vine",
+"rarity": "Uncommon",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 179,
+"name": "Sprout - Experiment 509",
+"rarity": "Rare",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 180,
+"name": "Stitch - Protector of Frogs",
+"rarity": "Common",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 181,
+"name": "Sheriff of Nottingham - Vine Slayer",
+"rarity": "Common",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 182,
+"name": "Mata - Meat Hut Waitress",
+"rarity": "Common",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 183,
+"name": "Violet Parr - Force Field Practice",
+"rarity": "Common",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 184,
+"name": "Dr. Hamsterviel - Evil Observer",
+"rarity": "Uncommon",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 185,
+"name": "Owl - Hunny Ranger",
+"rarity": "Common",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 186,
+"name": "Megavolt - Electrical Menace",
+"rarity": "Uncommon",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 187,
+"name": "Darkwing Duck - Shadowy Superhero",
+"rarity": "Common",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 188,
+"name": "Omnidroid - Scanning for Threats",
+"rarity": "Common",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 189,
+"name": "Flynn Rider - High-Climbing Rogue",
+"rarity": "Common",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 190,
+"name": "The Irate Chef - Meat Hut Cook",
+"rarity": "Uncommon",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 191,
+"name": "Kronk - Meat Hut Cook",
+"rarity": "Rare",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 192,
+"name": "Mulan - Created by the Vine",
+"rarity": "Common",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 193,
+"name": "Diablo - Protecting His Mistress",
+"rarity": "Common",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 194,
+"name": "Scar - Created by the Vine",
+"rarity": "Legendary",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 195,
+"name": "Maximus - Relentless Stallion",
+"rarity": "Rare",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 196,
+"name": "Omnidroid - Ultimate Iteration",
+"rarity": "Rare",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 197,
+"name": "The Vine - Towering Stalk",
+"rarity": "Super Rare",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 198,
+"name": "Cower Before Me!",
+"rarity": "Common",
+"color": "Steel",
+"type": "Action"
+},
+{
+"number": 199,
+"name": "We'll Save Our Village",
+"rarity": "Common",
+"color": "Steel",
+"type": "Action"
+},
+{
+"number": 200,
+"name": "Look What You've Done",
+"rarity": "Uncommon",
+"color": "Steel",
+"type": "Action"
+},
+{
+"number": 201,
+"name": "You Broke My Smolder",
+"rarity": "Uncommon",
+"color": "Steel",
+"type": "Action"
+},
+{
+"number": 202,
+"name": "Attack of the Vine!",
+"rarity": "Rare",
+"color": "Steel",
+"type": "Action"
+},
+{
+"number": 203,
+"name": "Windstorm",
+"rarity": "Rare",
+"color": "Steel",
+"type": "Action"
+},
+{
+"number": 204,
+"name": "Discarded Armor",
+"rarity": "Uncommon",
+"color": "Steel",
+"type": "Item"
+},
+{
+"number": 205,
+"name": "The Weedwhacker",
+"rarity": "Uncommon",
+"color": "Steel",
+"type": "Item"
+},
+{
+"number": 206,
+"name": "Absorbing Bloom",
+"rarity": "Uncommon",
+"color": "Steel",
+"type": "Item"
+},
+{
+"number": 207,
+"name": "Vine Entrance - Ominous Passageway",
+"rarity": "Rare",
+"color": "Steel",
+"type": "Location"
+},
+{
+"number": 208,
+"name": "Jasmine - Vine Expert",
+"rarity": "Epic",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 209,
+"name": "Boo - In Disguise",
+"rarity": "Epic",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 210,
+"name": "Meilin Lee - Losing Control",
+"rarity": "Epic",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 211,
+"name": "HeiHei - Created by the Vine",
+"rarity": "Epic",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 212,
+"name": "Winnie the Pooh - Hunny Archmage",
+"rarity": "Epic",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 213,
+"name": "Mrs. Incredible - Created by the Vine",
+"rarity": "Epic",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 214,
+"name": "Mother Gothel - Evil as Ever",
+"rarity": "Epic",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 215,
+"name": "Kevin - Flightless Bird",
+"rarity": "Epic",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 216,
+"name": "Peter Pan - Created by the Vine",
+"rarity": "Epic",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 217,
+"name": "Randall Boggs - Envious Coworker",
+"rarity": "Epic",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 218,
+"name": "Sun Yee - Red Panda Spirit",
+"rarity": "Epic",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 219,
+"name": "Dash Parr - Dodgeball Dynamo",
+"rarity": "Epic",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 220,
+"name": "Henry J. Waternoose III - Chief Executive Officer",
+"rarity": "Epic",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 221,
+"name": "Roz - Always Watching",
+"rarity": "Epic",
+"color": "Sapphire",
+"type": "Character"
+},
+{
+"number": 222,
+"name": "Hundred Acre Wood - Hunny Campsite",
+"rarity": "Epic",
+"color": "Sapphire",
+"type": "Location"
+},
+{
+"number": 223,
+"name": "Kronk - Meat Hut Cook",
+"rarity": "Epic",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 224,
+"name": "Mulan - Created by the Vine",
+"rarity": "Epic",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 225,
+"name": "Megavolt - Electrical Menace",
+"rarity": "Epic",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 226,
+"name": "Mike Wazowski - Heroic Climber",
+"rarity": "Enchanted",
+"color": "Amber",
+"type": "Character"
+},
+{
+"number": 227,
+"name": "Pocahontas & Meeko - Adventurous Friends",
+"rarity": "Enchanted",
+"color": "Amber-Amethyst",
+"type": "Character"
+},
+{
+"number": 228,
+"name": "Woody & Buzz Lightyear - Best Buddies",
+"rarity": "Enchanted",
+"color": "Amber-Emerald",
+"type": "Character"
+},
+{
+"number": 229,
+"name": "Sulley & Boo - Scare Buddies",
+"rarity": "Enchanted",
+"color": "Amber-Ruby",
+"type": "Character"
+},
+{
+"number": 230,
+"name": "The Madrigal Family - Every Generation",
+"rarity": "Enchanted",
+"color": "Amber-Sapphire",
+"type": "Character"
+},
+{
+"number": 231,
+"name": "Merida - Wisp Conjurer",
+"rarity": "Enchanted",
+"color": "Amethyst",
+"type": "Character"
+},
+{
+"number": 232,
+"name": "Aladdin & Genie - Mischievous Pals",
+"rarity": "Enchanted",
+"color": "Amethyst-Emerald",
+"type": "Character"
+},
+{
+"number": 233,
+"name": "Peter Pan & Tinker Bell - Fast Friends",
+"rarity": "Enchanted",
+"color": "Amethyst-Ruby",
+"type": "Character"
+},
+{
+"number": 234,
+"name": "Winnie the Pooh & Piglet - Hunny Mages",
+"rarity": "Enchanted",
+"color": "Amethyst-Sapphire",
+"type": "Character"
+},
+{
+"number": 235,
+"name": "Maleficent & Diablo - Evil Incarnate",
+"rarity": "Enchanted",
+"color": "Amethyst-Steel",
+"type": "Character"
+},
+{
+"number": 236,
+"name": "Tod & Copper - Best of Friends",
+"rarity": "Enchanted",
+"color": "Emerald",
+"type": "Character"
+},
+{
+"number": 237,
+"name": "Carl Fredricksen & Russell - Intrepid Explorers",
+"rarity": "Enchanted",
+"color": "Emerald-Ruby",
+"type": "Character"
+},
+{
+"number": 238,
+"name": "Mickey Mouse & Minnie Mouse - Adventuring Duo",
+"rarity": "Enchanted",
+"color": "Emerald-Sapphire",
+"type": "Character"
+},
+{
+"number": 239,
+"name": "Rapunzel & Flynn Rider - Unlikely Pair",
+"rarity": "Enchanted",
+"color": "Emerald-Steel",
+"type": "Character"
+},
+{
+"number": 240,
+"name": "Meilin Lee - Popular Red Panda",
+"rarity": "Enchanted",
+"color": "Ruby",
+"type": "Character"
+},
+{
+"number": 241,
+"name": "Dash Parr & Violet Parr - Super Siblings",
+"rarity": "Enchanted",
+"color": "Ruby-Steel",
+"type": "Character"
+},
+{
+"number": 242,
+"name": "Darkwing Duck & Launchpad - St. Canard's Finest",
+"rarity": "Enchanted",
+"color": "Sapphire-Steel",
+"type": "Character"
+},
+{
+"number": 243,
+"name": "Scar - Created by the Vine",
+"rarity": "Enchanted",
+"color": "Steel",
+"type": "Character"
+},
+{
+"number": 244,
+"name": "Lilo & Stitch - Fun-Loving Friends",
+"rarity": "Iconic",
+"color": "Amber-Steel",
+"type": "Character"
+},
+{
+"number": 245,
+"name": "Belle & Beast - Certain as the Sun",
+"rarity": "Iconic",
+"color": "Ruby-Sapphire",
+"type": "Character"
+},
+{
+"number": 246,
+"name": "Christopher Robin - Hunny Sage",
+"rarity": "Legendary",
+"color": "Amethyst-Sapphire",
+"type": "Character"
+},
+{
+"number": 247,
+"name": "Violet Parr - Super Resilient",
+"rarity": "Super Rare",
+"color": "Steel",
+"type": "Character"
+}
+]
+}
